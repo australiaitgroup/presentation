@@ -1,5 +1,5 @@
 import { Slide, Inner, Half, Title, CardSm, Stagger, StaggerItem } from '../ui';
-import { colors, fonts } from '../../styles/theme';
+import { fonts } from '../../styles/theme';
 import AvatarWall from '../AvatarWall';
 
 const reasons = [

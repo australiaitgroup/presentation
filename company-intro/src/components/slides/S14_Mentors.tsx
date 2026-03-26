@@ -41,6 +41,3 @@ export default function S14_Mentors() {
 	);
 }
 
-function Slide_({ bg, children }: { bg: string; children: React.ReactNode }) {
-	return <Slide bg={bg}>{children}</Slide>;
-}

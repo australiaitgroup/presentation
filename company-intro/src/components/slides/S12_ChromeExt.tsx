@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { QRCodeSVG } from 'qrcode.react';
 import { Slide, Inner, Half, Title, Divider, Tag, Stagger, StaggerItem } from '../ui';
-import { colors, fonts, border, shadow } from '../../styles/theme';
+import { colors } from '../../styles/theme';
 
 interface Feature {
 	id: string;

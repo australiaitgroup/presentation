@@ -58,7 +58,7 @@ export default function S02_WhoWeAre() {
 								style={{
 									padding: '14px 18px', background: s.bg, border: `3px solid ${colors.black}`,
 									boxShadow: `5px 5px 0 ${colors.black}`, transform: `rotate(${s.rotate}deg)`,
-									color: [colors.blue, colors.purple].includes(s.bg) ? '#fff' : '#000',
+									color: (s.bg === colors.blue || s.bg === colors.purple) ? '#fff' : '#000',
 								}}
 							>
 								<div style={{ fontFamily: fonts.heading, fontSize: 36, fontWeight: 900, lineHeight: 1 }}>

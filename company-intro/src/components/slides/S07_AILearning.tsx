@@ -187,7 +187,7 @@ export default function S07_AILearning() {
 										<div style={{ fontFamily: fonts.heading, fontSize: 12, fontWeight: 800, color: colors.white }}>{d.title}</div>
 										<div style={{ fontSize: 9, color: 'rgba(255,255,255,0.3)' }}>{d.chapters.length} 章 · {d.duration}</div>
 									</div>
-									<span style={{ fontSize: 8, padding: '1px 5px', background: d.badgeBg, fontWeight: 800, color: [colors.yellow, colors.green].includes(d.badgeBg) ? '#000' : '#fff' }}>{d.badge}</span>
+									<span style={{ fontSize: 8, padding: '1px 5px', background: d.badgeBg, fontWeight: 800, color: (d.badgeBg === colors.yellow || d.badgeBg === colors.green) ? '#000' : '#fff' }}>{d.badge}</span>
 								</motion.button>
 							);
 						})}
@@ -213,7 +213,7 @@ export default function S07_AILearning() {
 										<div style={{ fontSize: 10, fontWeight: 700, color: '#888' }}>章节</div>
 									</div>
 									<div style={{ display: 'flex', gap: 4, flexDirection: 'column' }}>
-										<span style={{ padding: '2px 8px', fontSize: 10, fontWeight: 700, background: active.color, color: [colors.yellow, colors.green].includes(active.color) ? '#000' : '#fff', border: `1.5px solid ${colors.black}` }}>{active.duration}</span>
+										<span style={{ padding: '2px 8px', fontSize: 10, fontWeight: 700, background: active.color, color: (active.color === colors.yellow || active.color === colors.green) ? '#000' : '#fff', border: `1.5px solid ${colors.black}` }}>{active.duration}</span>
 										<span style={{ padding: '2px 8px', fontSize: 10, fontWeight: 700, background: '#f1f5f9', border: `1.5px solid ${colors.black}` }}>免费</span>
 									</div>
 								</div>
@@ -264,7 +264,7 @@ export default function S07_AILearning() {
 										padding: '6px 16px', background: active.color, fontFamily: fonts.heading,
 										fontWeight: 800, fontSize: 12, border: `2px solid ${colors.black}`,
 										boxShadow: `3px 3px 0 ${colors.black}`,
-										color: [colors.yellow, colors.green].includes(active.color) ? '#000' : '#fff',
+										color: (active.color === colors.yellow || active.color === colors.green) ? '#000' : '#fff',
 									}}>免费开始 →</span>
 								</div>
 							</div>

@@ -1,0 +1,75 @@
+name: Deploy Presentations to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: latest
+
+      # Build company-intro
+      - name: Build company-intro
+        working-directory: company-intro
+        run: |
+          bun install
+          bun run build
+
+      # Assemble all presentations into one output
+      - name: Assemble output
+        run: |
+          mkdir -p _site/company-intro
+          cp -r company-intro/dist/* _site/company-intro/
+          # Add index page listing all presentations
+          cat > _site/index.html << 'HTMLEOF'
+          <!DOCTYPE html>
+          <html lang="en">
+          <head>
+            <meta charset="UTF-8">
+            <title>JR Academy Presentations</title>
+            <style>
+              * { margin: 0; padding: 0; box-sizing: border-box; }
+              body { font-family: "DM Sans", sans-serif; background: #fff1e7; min-height: 100vh; display: flex; align-items: center; justify-content: center; }
+              .container { text-align: center; }
+              h1 { font-size: 48px; font-weight: 900; margin-bottom: 32px; }
+              a { display: inline-block; padding: 16px 32px; background: #ff5757; color: #fff; text-decoration: none; font-size: 18px; font-weight: 700; border: 3px solid #000; box-shadow: 6px 6px 0 #000; transition: all 0.15s; margin: 8px; }
+              a:hover { box-shadow: none; transform: translate(4px, 4px); }
+            </style>
+          </head>
+          <body>
+            <div class="container">
+              <h1>JR Academy<br>Presentations</h1>
+              <a href="./company-intro/">公司介绍 Company Intro</a>
+            </div>
+          </body>
+          </html>
+          HTMLEOF
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

@@ -103,7 +103,7 @@ export default function S02_WhoWeAre() {
 						animate={{ scale: 1 }}
 						transition={{ delay: 0.7, type: 'spring' }}
 						style={{
-							position: 'absolute', top: '45%', left: '35%', zIndex: 2,
+							position: 'absolute', top: -16, left: -16, zIndex: 2,
 							padding: '10px 18px', background: colors.red, color: '#fff',
 							border: `3px solid ${colors.black}`, boxShadow: `4px 4px 0 ${colors.black}`,
 							transform: 'rotate(-8deg)', fontFamily: fonts.heading, fontWeight: 900, fontSize: 16,

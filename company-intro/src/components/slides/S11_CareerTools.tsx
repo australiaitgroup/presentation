@@ -27,8 +27,8 @@ export default function S11_CareerTools() {
 					))}
 				</Stagger>
 				<div>
-					<span style={{ fontFamily: fonts.heading, fontSize: 48, fontWeight: 700, color: colors.red }}>4,000+</span>
-					<span style={{ fontSize: 18, fontWeight: 600, marginLeft: 12 }}>学员通过匠人拿到 Offer</span>
+					<span style={{ fontFamily: fonts.heading, fontSize: 48, fontWeight: 700, color: colors.red }}>6,000+</span>
+					<span style={{ fontSize: 18, fontWeight: 600, marginLeft: 12 }}>学员拿到 Offer</span>
 				</div>
 			</Inner>
 		</Slide>

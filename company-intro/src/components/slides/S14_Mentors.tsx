@@ -1,3 +1,4 @@
+import AnimatedBg from '../AnimatedBg';
 import { img } from '../../utils/img';
 import { Slide, Inner, Title, Subtitle, CardSm, Stagger, StaggerItem } from '../ui';
 
@@ -18,7 +19,8 @@ const mentors = [
 
 export default function S14_Mentors() {
 	return (
-		<Slide bg="#f5f0eb">
+		<Slide bg="#f5f0eb" style={{ position: 'relative' }}>
+			<AnimatedBg variant="dots" opacity={0.05} />
 			<Inner center>
 				<Title size="clamp(36px,5vw,64px)">600+ 来自顶尖企业的导师</Title>
 				<Subtitle>来自 Google · Canva · Atlassian · Microsoft · Amazon · Deloitte · PwC · ANZ · CBA</Subtitle>

@@ -1,3 +1,4 @@
+import AnimatedBg from '../AnimatedBg';
 import { Slide, Inner, Title, Stagger, StaggerItem } from '../ui';
 import { colors, fonts, border, shadowSm } from '../../styles/theme';
 
@@ -12,7 +13,8 @@ const steps = [
 
 export default function S19_Journey() {
 	return (
-		<Slide bg={colors.warmBg}>
+		<Slide bg={colors.warmBg} style={{ position: 'relative' }}>
+			<AnimatedBg variant="grid" opacity={0.04} />
 			<Inner center>
 				<Title size="clamp(40px,5.5vw,72px)">你的学习旅程</Title>
 				<Stagger style={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'center', gap: 0, flexWrap: 'wrap' }}>

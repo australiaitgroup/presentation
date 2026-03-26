@@ -4,7 +4,7 @@ import { colors, fonts } from '../../styles/theme';
 
 const reasons = [
 	{ keyword: '时机对', desc: 'AI 教育窗口期 2025-2027，现在是加速的最佳时刻', color: colors.red },
-	{ keyword: '人对', desc: '8 年积累，10,000 学员 + 6,000 Offer，不是纸上谈兵', color: colors.yellow },
+	{ keyword: '人对', desc: '8 年积累，10,000+ 学员，350+ 认证课程，不是纸上谈兵', color: colors.yellow },
 	{ keyword: '市场对', desc: '全球 AI 教育 $50B+ 市场，没有第二个全链路 + 社群驱动竞争者', color: colors.green },
 	{ keyword: '产品对', desc: '10+ 子系统 · 6 种 Lab · 3 款插件 · 350+ 认证，完整矩阵', color: colors.blue },
 	{ keyword: '模式对', desc: '多元收入 + B2B SaaS + Credits 经济 + 社群飞轮，不烧钱', color: colors.purple },

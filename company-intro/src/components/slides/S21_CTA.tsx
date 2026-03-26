@@ -1,3 +1,4 @@
+import AnimatedBg from '../AnimatedBg';
 import { useState } from 'react';
 import { Slide, Inner, Title, Highlight, Stagger, StaggerItem } from '../ui';
 import { colors, fonts } from '../../styles/theme';
@@ -10,7 +11,8 @@ const links = [
 
 export default function S21_CTA() {
 	return (
-		<Slide bg={colors.dark}>
+		<Slide bg={colors.dark} style={{ position: 'relative' }}>
+			<AnimatedBg variant="gradient" opacity={0.15} color="#ff5757" />
 			<Inner center>
 				<Stagger>
 					<StaggerItem>
@@ -34,14 +36,7 @@ export default function S21_CTA() {
 							<CTAButton bg="transparent" color={colors.white}>预约咨询</CTAButton>
 						</div>
 					</StaggerItem>
-					<StaggerItem>
-						<div style={{
-							width: 120, height: 120, border: '3px solid rgba(255,255,255,0.3)',
-							background: 'rgba(255,255,255,0.1)', display: 'flex', alignItems: 'center', justifyContent: 'center',
-							margin: '0 auto 24px', color: 'rgba(255,255,255,0.5)', fontSize: 14, textAlign: 'center', fontWeight: 600,
-						}}>QR Code<br />扫码咨询</div>
-					</StaggerItem>
-					<StaggerItem>
+						<StaggerItem>
 						<div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 12, color: '#fff', fontSize: 18, fontWeight: 700 }}>
 							<div style={{ width: 44, height: 44, borderRadius: 8, background: '#fff', display: 'flex', alignItems: 'center', justifyContent: 'center', fontFamily: fonts.heading, fontWeight: 800, fontSize: 20, color: colors.dark }}>JR</div>
 							匠人学院 JR ACADEMY

@@ -1,3 +1,4 @@
+import AnimatedBg from '../AnimatedBg';
 import { Slide, Inner, Title, Divider } from '../ui';
 import { colors, fonts } from '../../styles/theme';
 
@@ -11,7 +12,8 @@ const rows = [
 
 export default function S04_StudentWork() {
 	return (
-		<Slide bg={colors.white}>
+		<Slide bg={colors.white} style={{ position: 'relative' }}>
+			<AnimatedBg variant="shapes" opacity={0.04} />
 			<Inner center>
 				<Title size="clamp(40px,5.5vw,72px)">我们学员工作在</Title>
 				<Divider center />

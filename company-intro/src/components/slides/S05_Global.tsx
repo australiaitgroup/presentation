@@ -1,3 +1,4 @@
+import AnimatedBg from '../AnimatedBg';
 import { useState } from 'react';
 import { ComposableMap, Geographies, Geography, Marker, Line } from 'react-simple-maps';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -26,6 +27,7 @@ const locations: Location[] = [
 	{ name: 'United States', flag: '🇺🇸', coords: [-118.24, 34.05], label: 'USA', desc: '北美华人技术社区' },
 	{ name: 'China', flag: '🇨🇳', coords: [121.47, 31.23], label: 'China', desc: '上海 · 全球华人学员最大来源地' },
 	{ name: 'Canada', flag: '🇨🇦', coords: [-79.38, 43.65], label: 'Canada', desc: '多伦多 · 温哥华 · 北美华人社区' },
+	{ name: 'Dubai', flag: '🇦🇪', coords: [55.27, 25.2], label: 'Dubai', desc: '迪拜 · 中东华人技术社区' },
 ];
 
 export default function S05_Global() {
@@ -33,7 +35,8 @@ export default function S05_Global() {
 	const activeLocation = locations.find(l => l.name === active);
 
 	return (
-		<Slide bg={colors.darkBg}>
+		<Slide bg={colors.darkBg} style={{ position: 'relative' }}>
+			<AnimatedBg variant="gradient" opacity={0.12} color="#38B6FF" />
 			<Inner style={{
 				flexDirection: 'column', justifyContent: 'center', alignItems: 'center',
 				padding: '24px 40px', gap: 12, height: '90%',
@@ -44,7 +47,7 @@ export default function S05_Global() {
 						<Title white size="clamp(32px,4vw,56px)">走向国际</Title>
 						<div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>
 							<Tag bg={colors.red}>中文站 jiangren.com.au</Tag>
-							<Tag bg={colors.blue}>英文站 jiangren.au</Tag>
+							<Tag bg={colors.blue}>英文站 jiangren.com.au/en</Tag>
 						</div>
 					</div>
 					<p style={{ color: 'rgba(255,255,255,0.5)', fontSize: 14, fontFamily: fonts.mono }}>点击标记查看详情</p>

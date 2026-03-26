@@ -6,8 +6,8 @@ const streams = [
 	{ name: '认证订阅', price: '$100-500/人', model: 'SaaS 订阅', note: '持续扩展', color: colors.blue },
 	{ name: 'Credits 充值', price: '$10-500/次', model: '虚拟货币', note: 'AI 功能消费', color: colors.green },
 	{ name: 'B2B 企业方案', price: '$29-89/人/月', model: '团队 SaaS', note: '增长引擎', color: colors.purple },
-	{ name: 'VIP 辅导', price: '$1K-5K/人', model: '结果付费', note: '无 Offer 退 50%', color: colors.orange },
-	{ name: '人才推荐', price: '年薪 10-20%', model: '佣金', note: '纯利润', color: colors.dark },
+	{ name: 'VIP 1v1 辅导', price: '$1K-5K/人', model: '高端服务', note: 'AI 技能深度辅导', color: colors.orange },
+	{ name: '大学合作', price: '按校定价', model: 'B2B2C', note: 'UniMate AI 授权', color: colors.dark },
 ];
 
 export default function S11_BusinessModel() {

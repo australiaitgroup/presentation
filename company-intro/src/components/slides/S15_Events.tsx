@@ -1,3 +1,4 @@
+import AnimatedBg from '../AnimatedBg';
 import { img } from '../../utils/img';
 import { Slide, Inner, Title, Subtitle, Stagger, StaggerItem } from '../ui';
 import { colors, border, shadowSm, shadow } from '../../styles/theme';
@@ -12,7 +13,6 @@ const photos = [
 	{ src: '/images/event-slider-3.webp', caption: 'Meetup 现场' },
 	{ src: '/images/event-slider-6.webp', caption: '公开课' },
 	{ src: '/images/meta-image-meetup.webp', caption: '元宇宙 Meetup' },
-	{ src: '/images/event-slider-7.webp', caption: '技术分享' },
 ];
 
 function PhotoCard({ src, caption, large }: { src: string; caption: string; large?: boolean }) {
@@ -37,8 +37,9 @@ function PhotoCard({ src, caption, large }: { src: string; caption: string; larg
 
 export default function S15_Events() {
 	return (
-		<Slide bg={colors.warmBg}>
-			<Inner center>
+		<Slide bg={colors.warmBg} style={{ position: 'relative' }}>
+			<AnimatedBg variant="shapes" opacity={0.05} />
+			<Inner center style={{ position: 'relative', zIndex: 1 }}>
 				<Title size="clamp(36px,5vw,64px)">200+ 线上 & 线下活动</Title>
 				<Subtitle>每年 38+ 场 · 覆盖 4 大城市 · 每场 100+ 人</Subtitle>
 

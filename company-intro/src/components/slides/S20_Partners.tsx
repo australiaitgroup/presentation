@@ -1,3 +1,4 @@
+import AnimatedBg from '../AnimatedBg';
 import { Slide, Inner, Title, Divider, Card, Stagger, StaggerItem } from '../ui';
 import { colors, fonts } from '../../styles/theme';
 
@@ -5,7 +6,8 @@ const partners = ['ATLASSIAN', 'Canva', 'aws', 'Google Cloud', 'Microsoft', 'Del
 
 export default function S20_Partners() {
 	return (
-		<Slide bg={colors.white}>
+		<Slide bg={colors.white} style={{ position: 'relative' }}>
+			<AnimatedBg variant="shapes" opacity={0.04} />
 			<Inner center>
 				<Title size="clamp(40px,5.5vw,72px)">我们的合作伙伴</Title>
 				<Divider center />

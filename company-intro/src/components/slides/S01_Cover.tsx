@@ -187,7 +187,7 @@ export default function S01_Cover() {
 							transform: 'rotate(-5deg)',
 						}}
 					>
-						<div style={{ fontFamily: fonts.heading, fontSize: 28, fontWeight: 900 }}>4,000+</div>
+						<div style={{ fontFamily: fonts.heading, fontSize: 28, fontWeight: 900 }}>6,000+</div>
 						<div style={{ fontSize: 12, fontWeight: 700 }}>学员拿到 Offer</div>
 					</motion.div>
 				</motion.div>

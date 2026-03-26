@@ -4,8 +4,8 @@ import { colors, fonts, border } from '../../styles/theme';
 const risks = [
 	{
 		risk: '"AI 让教育没价值了"',
-		analysis: '恰恰相反 — AI 改变了「教什么」，但「帮人拿到 Offer」更值钱了。ChatGPT 能回答问题，但不能帮你找工作。',
-		response: '我们卖的不是知识，是结果',
+		analysis: '恰恰相反 — AI 改变了「教什么」，但「帮人真正学会 AI」更值钱了。ChatGPT 能回答问题，但不能帮你系统掌握技能。',
+		response: '我们卖的不是知识，是学会的能力',
 	},
 	{
 		risk: '"大厂会做同样的事"',

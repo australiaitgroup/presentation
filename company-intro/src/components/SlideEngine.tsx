@@ -17,8 +17,24 @@ export default function SlideEngine({ children }: SlideEngineProps) {
 		if (isAnimating.current || index < 0 || index >= total || index === current) return;
 		isAnimating.current = true;
 		setCurrent(index);
+		window.history.replaceState(null, '', `#${index + 1}`);
 		setTimeout(() => { isAnimating.current = false; }, 500);
 	}, [current, total]);
+
+	// Read hash on mount & listen for hash changes
+	useEffect(() => {
+		const readHash = () => {
+			const hash = window.location.hash.replace('#', '');
+			const idx = parseInt(hash, 10) - 1;
+			if (!isNaN(idx) && idx >= 0 && idx < total && idx !== current) {
+				setCurrent(idx);
+			}
+		};
+		readHash();
+		window.addEventListener('hashchange', readHash);
+		return () => window.removeEventListener('hashchange', readHash);
+	// eslint-disable-next-line react-hooks/exhaustive-deps
+	}, [total]);
 
 	const next = useCallback(() => go(current + 1), [go, current]);
 	const prev = useCallback(() => go(current - 1), [go, current]);

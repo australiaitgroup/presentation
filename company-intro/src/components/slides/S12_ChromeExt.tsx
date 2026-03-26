@@ -1,3 +1,4 @@
+import AnimatedBg from '../AnimatedBg';
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { QRCodeSVG } from 'qrcode.react';
@@ -193,7 +194,8 @@ export default function S12_ChromeExt() {
 	const active = features.find(f => f.id === activeTab)!;
 
 	return (
-		<Slide bg={colors.darkBg}>
+		<Slide bg={colors.darkBg} style={{ position: 'relative' }}>
+			<AnimatedBg variant="gradient" opacity={0.1} color="#7ED957" />
 			<Inner split>
 				<Stagger style={{ flex: 0.85 }}>
 					<StaggerItem>

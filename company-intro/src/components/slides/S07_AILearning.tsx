@@ -131,6 +131,57 @@ const directions: Direction[] = [
 		tools: ['OpenClaw', 'MCP', 'Ollama', 'Local LLM'],
 		color: '#ff6b35',
 	},
+	{
+		id: 'pm', icon: '📋', badge: '10章', badgeBg: colors.purple,
+		title: 'AI 产品经理', subtitle: '用 AI 重新定义产品管理',
+		duration: '2 周',
+		chapters: [
+			'AI 产品经理概述', 'AI 产品设计方法论', 'AI 需求分析与用户画像',
+			'数据驱动决策', 'AI 产品指标体系', 'AI 竞品分析方法',
+			'AI Ethics & 合规', 'AI 产品路线图', 'AI PM 面试准备', 'AI 产品经理职业路径',
+		],
+		tools: ['Figma', 'Linear', 'Amplitude', 'ChatGPT'],
+		color: colors.purple,
+	},
+	{
+		id: 'data', icon: '📊', badge: '12章', badgeBg: colors.blue,
+		title: 'AI 数据分析', subtitle: '用 AI 让数据说话',
+		duration: '3 周',
+		chapters: [
+			'AI 数据分析入门', 'ChatGPT 数据处理', 'AI 可视化工具',
+			'自然语言查询数据库', 'AI 预测分析', 'AI 异常检测',
+			'AI 报告自动生成', 'Python + AI 数据分析', 'Excel + AI 高级技巧',
+			'BI 工具 + AI 集成', '实战: 销售数据分析', '实战: 用户行为分析',
+		],
+		tools: ['ChatGPT', 'Python', 'Pandas', 'Tableau'],
+		color: colors.blue,
+	},
+	{
+		id: 'finance', icon: '💹', badge: '20章', badgeBg: colors.green,
+		title: 'AI 财务与会计', subtitle: '让 AI 提升财务效率与洞察',
+		duration: '4 周',
+		chapters: [
+			'AI 财务概述', 'AI 发票识别与处理', 'AI 费用报销自动化', 'AI 预算编制',
+			'AI 财务预测', 'AI 现金流管理', 'AI 审计辅助', 'AI 税务合规',
+			'AI 应收应付管理', 'AI 财务报告生成', 'ChatGPT 财务分析', 'AI 风险评估',
+			'AI 合同审核', 'AI 供应商管理', 'AI 成本优化', 'AI 投资分析入门',
+			'Power BI + AI', 'Excel + AI 财务模型', '实战: 月度结算自动化', '实战: 财务仪表盘',
+		],
+		tools: ['ChatGPT', 'Excel', 'Power BI', 'Xero'],
+		color: colors.green,
+	},
+	{
+		id: 'content', icon: '🎬', badge: '8章', badgeBg: colors.yellow,
+		title: 'AI 内容创作', subtitle: 'AI 生成视频、图片、文章',
+		duration: '2 周',
+		chapters: [
+			'AI 内容创作概述', 'AI 文案写作 (ChatGPT/Claude)', 'AI 图片生成 (Midjourney/DALL-E)',
+			'AI 视频生成 (Runway/Pika)', 'AI 音频与配音', 'AI 社交媒体运营',
+			'AI SEO 内容优化', '实战: AI 内容生产流水线',
+		],
+		tools: ['Midjourney', 'Runway', 'ChatGPT', 'Canva AI'],
+		color: colors.yellow,
+	},
 ];
 
 export default function S07_AILearning() {

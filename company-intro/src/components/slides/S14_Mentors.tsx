@@ -1,3 +1,4 @@
+import { img } from '../../utils/img';
 import { Slide, Inner, Title, Subtitle, CardSm, Stagger, StaggerItem } from '../ui';
 
 const mentors = [
@@ -26,7 +27,7 @@ export default function S14_Mentors() {
 						<StaggerItem key={m.name}>
 							<CardSm style={{ textAlign: 'center', padding: '16px 8px' }}>
 								{(m as any).img ? (
-									<img src={(m as any).img} alt={m.name} style={{ width: 48, height: 48, borderRadius: '50%', objectFit: 'cover', marginBottom: 6, border: '2px solid #000' }} onError={e => { (e.target as HTMLImageElement).style.display = 'none'; }} />
+									<img src={img((m as any).img)} alt={m.name} style={{ width: 48, height: 48, borderRadius: '50%', objectFit: 'cover', marginBottom: 6, border: '2px solid #000' }} onError={e => { (e.target as HTMLImageElement).style.display = 'none'; }} />
 								) : (
 									<div style={{ fontSize: 30, marginBottom: 6 }}>👤</div>
 								)}

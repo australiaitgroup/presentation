@@ -1,3 +1,4 @@
+import { img } from '../../utils/img';
 import { motion } from 'framer-motion';
 import { Slide } from '../ui';
 import { colors, fonts } from '../../styles/theme';
@@ -170,7 +171,7 @@ export default function S01_Cover() {
 						overflow: 'hidden',
 						transform: 'rotate(3deg)',
 					}}>
-						<img src="/images/event-atlassian-group.webp" alt="JR Academy" style={{ width: '100%', height: 'auto', display: 'block' }}
+						<img src={img("/images/event-atlassian-group.webp")} alt="JR Academy" style={{ width: '100%', height: 'auto', display: 'block' }}
 							onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }}
 						/>
 					</div>

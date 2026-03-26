@@ -545,11 +545,11 @@ body { font-family: 'DM Sans', 'Noto Sans SC', sans-serif; background: var(--bg)
       </div>
 
       <div class="lesson">
-        <div class="lesson-title"><span class="lesson-num" style="background:var(--teal)">4.3</span><h4>AI 做客服机器人</h4><span class="type-badge">Lesson + Lab</span></div>
+        <div class="lesson-title"><span class="lesson-num" style="background:var(--teal)">4.3</span><h4>AI 做客服机器人 + 内部知识库 Bot</h4><span class="type-badge">Lesson + Lab</span></div>
         <div class="lesson-body">
-          <div class="lesson-section"><h5>📖 教学内容</h5><p>基于产品文档/FAQ 构建 AI 客服 → L1 自动处理 → 复杂问题转人工 → 效果评估</p><div class="tools"><span class="tool">Chatbase</span><span class="tool">Intercom Fin</span></div></div>
-          <div class="lesson-section"><h5>🔬 Lab 实操</h5><p>用 Chatbase 为虚拟产品搭建 AI 客服机器人 (上传 FAQ 文档，测试 10 个常见问题)</p><span class="review-tag ai">🤖 AI 测试回答准确率</span></div>
-          <div class="lesson-section"><h5>📋 作业</h5><p>提交客服机器人链接 + 10 个测试 Q&A 对 + 准确率报告 + 改进建议</p><span class="review-tag both">👨‍🏫+🤖 AI评+老师抽查</span></div>
+          <div class="lesson-section"><h5>📖 教学内容</h5><p>方案 A: Chatbase/Intercom Fin — 基于 FAQ 构建 AI 客服，L1 自动处理<br>方案 B: <strong style="color:#E84142">OpenClaw</strong> — 本地部署 AI Bot，上传公司文档做内部知识库，接 Slack/飞书/Discord，数据不出公司</p><div class="tools"><span class="tool">Chatbase</span><span class="tool">Intercom Fin</span><span class="tool" style="background:#E84142;color:#fff">OpenClaw</span></div></div>
+          <div class="lesson-section"><h5>🔬 Lab 实操</h5><p>用 Chatbase 搭外部客服 Bot (10 min) + 用 OpenClaw 搭内部知识库 Bot (连接 Slack/飞书，上传公司文档)</p><span class="review-tag ai">🤖 AI 测试回答准确率</span></div>
+          <div class="lesson-section"><h5>📋 作业</h5><p>提交: 外部客服 Bot + 内部知识库 Bot + 对比报告 (哪个场景用哪个方案)</p><span class="review-tag both">👨‍🏫+🤖 AI评+老师抽查</span></div>
         </div>
       </div>
 
@@ -603,11 +603,11 @@ body { font-family: 'DM Sans', 'Noto Sans SC', sans-serif; background: var(--bg)
       </div>
 
       <div class="lesson">
-        <div class="lesson-title"><span class="lesson-num" style="background:var(--teal)">5.4</span><h4>AI 做流程自动化</h4><span class="type-badge">Lesson + Lab</span></div>
+        <div class="lesson-title"><span class="lesson-num" style="background:var(--teal)">5.4</span><h4>AI 做流程自动化 + 团队 AI Agent</h4><span class="type-badge">Lesson + Lab</span></div>
         <div class="lesson-body">
-          <div class="lesson-section"><h5>📖 教学内容</h5><p>AI 生成 SOP → 会议录音提取 action items → 自动周报 → 文档批量处理</p><div class="tools"><span class="tool">Scribe AI</span><span class="tool">Otter.ai</span><span class="tool">Gamma AI</span></div></div>
-          <div class="lesson-section"><h5>🔬 Lab 实操</h5><p>录制 5 分钟屏幕操作 → Scribe AI 自动生成 SOP；用 Gamma AI 从 bullet points 生成周报 PPT</p><span class="review-tag ai">🤖 AI 检查 SOP 步骤完整性</span></div>
-          <div class="lesson-section"><h5>📋 作业</h5><p>提交：1 份 SOP 文档 + 1 份自动生成的周报 PPT + 流程优化建议</p><span class="review-tag both">👨‍🏫+🤖 AI评+老师抽查</span></div>
+          <div class="lesson-section"><h5>📖 教学内容</h5><p>SOP 自动生成 (Scribe AI) → 周报自动化 (Gamma AI) → <strong style="color:#E84142">OpenClaw 团队自动化</strong>: 定时任务 (Cron 周报)、Pipeline 自动化 (邮件→分类→通知)、多 Agent 路由 (不同部门不同 Bot)</p><div class="tools"><span class="tool">Scribe AI</span><span class="tool">Gamma AI</span><span class="tool" style="background:#E84142;color:#fff">OpenClaw</span><span class="tool">Slack/飞书</span></div></div>
+          <div class="lesson-section"><h5>🔬 Lab 实操</h5><p>1. Scribe AI 生成 SOP (10 min)<br>2. OpenClaw 搭一个定时周报 Bot: 每周五自动汇总本周工作 → 发到 Slack 频道<br>3. OpenClaw Multi-Agent: 给 Marketing 和 Sales 各配一个专属 AI 助手</p><span class="review-tag ai">🤖 AI 检查 SOP + Bot 运行</span></div>
+          <div class="lesson-section"><h5>📋 作业</h5><p>提交: 1 份 SOP + OpenClaw Bot 截图 (定时任务 + 消息平台连接) + 团队自动化方案</p><span class="review-tag both">👨‍🏫+🤖 AI评+老师抽查</span></div>
         </div>
       </div>
 
@@ -667,6 +667,48 @@ body { font-family: 'DM Sans', 'Noto Sans SC', sans-serif; background: var(--bg)
           <div class="lesson-section"><h5>📖 教学内容</h5><p>分层培训设计 (AI Literacy → Tool Training → Advanced)；建立内部 Prompt Library；"AI Fridays" 实验机制</p></div>
           <div class="lesson-section"><h5>🔬 互动</h5><p>小组讨论：每组为不同部门 (Marketing / Sales / HR) 设计针对性的 AI 培训大纲</p></div>
           <div class="lesson-section"><h5>📋 作业</h5><p>为一个 50 人的 Marketing 部门设计 4 周 AI 培训计划 (课表 + 材料 + 考核)</p><span class="review-tag teacher">👨‍🏫 老师深度点评 (核心能力)</span></div>
+        </div>
+      </div>
+
+      <div class="lesson" style="border-color:#E84142">
+        <div class="lesson-title" style="background:#fef2f2">
+          <span class="lesson-num" style="background:#E84142">6.5</span>
+          <h4>组织级 AI Agent 部署 (OpenClaw)</h4>
+          <span class="type-badge" style="border-color:#E84142;color:#E84142">Lesson + Lab · NEW</span>
+        </div>
+        <div class="lesson-body">
+          <div class="lesson-section">
+            <h5>📖 教学内容</h5>
+            <p><strong style="color:#E84142">OpenClaw</strong> 作为组织级 AI 基础设施:<br>
+            → 为什么选 OpenClaw: 本地部署、数据不出公司、开源免费 (307K Stars)<br>
+            → 架构: Canvas 白板 + Voice Wake 语音 + 49 内置 Skills + 3200+ 社区 Skills<br>
+            → 21+ 消息平台: Slack / 飞书 / Discord / WhatsApp / Telegram<br>
+            → 多 Agent 路由: 给 Marketing、Sales、HR 各配专属 AI Agent<br>
+            → MCP 集成: 13000+ MCP Server 连接外部工具<br>
+            → 安全: ClawHavoc 事件回顾、沙箱机制、数据主权</p>
+            <div class="tools"><span class="tool" style="background:#E84142;color:#fff">OpenClaw</span><span class="tool">Docker</span><span class="tool">MCP</span><span class="tool">Slack/飞书</span></div>
+          </div>
+          <div class="lesson-section">
+            <h5>🔬 Lab 实操</h5>
+            <p>1. 安装 OpenClaw (Docker 一键部署)<br>
+            2. 连接 LLM (OpenAI/Claude/Ollama 本地模型)<br>
+            3. 接入 Slack 或飞书 → 团队可以直接在聊天里问 AI<br>
+            4. 上传公司 wiki/handbook → AI 变成公司知识库<br>
+            5. 配置 Cron 定时任务: 每周一自动发团队本周待办摘要<br>
+            6. 设置 Multi-Agent: Marketing Bot + Sales Bot + Ops Bot</p>
+            <span class="review-tag ai">🤖 AI 检查部署 + 功能验证</span>
+          </div>
+          <div class="lesson-section">
+            <h5>📋 作业</h5>
+            <p>为你的公司/团队设计 OpenClaw 部署方案:<br>
+            → 选择哪些消息平台？<br>
+            → 配几个 Agent？各负责什么？<br>
+            → 上传哪些文档做知识库？<br>
+            → 设置哪些自动化任务？<br>
+            → 安全和合规怎么处理？<br>
+            提交: 部署方案文档 + 截图证明跑通了</p>
+            <span class="review-tag teacher">👨‍🏫 老师深度点评 (组织级 AI 部署是核心能力)</span>
+          </div>
         </div>
       </div>
 
@@ -1942,12 +1984,20 @@ body { font-family: 'DM Sans', 'Noto Sans SC', sans-serif; background: var(--bg)
       <!-- M6-M7 -->
       <tr style="background:#fff7ed;border-bottom:2px solid var(--orange)"><td colspan="6" style="padding:8px 12px;font-weight:900;color:var(--orange)">M6-M7 变革管理 + 治理合规</td></tr>
       <tr style="border-bottom:1px solid #eee">
-        <td style="padding:8px 12px">6-7</td>
+        <td style="padding:8px 12px">6.1-6.4</td>
         <td style="padding:8px 12px">方法论 + Workshop</td>
         <td style="padding:8px 12px">评估报告 + 政策文档</td>
         <td style="padding:8px 12px;text-align:center"><span style="padding:2px 8px;background:#fef3c7;font-weight:700;color:#92400e">新建 3 个</span></td>
         <td style="padding:8px 12px;color:#888">需要新建:<br>1. AI 就绪度评估 Lab<br>2. AI 机会审计 Lab<br>3. AI 使用政策 Lab</td>
-        <td style="padding:8px 12px;font-size:11px;color:#666">场景式 Lab (填框架 + 生成报告)，不需要代码</td>
+        <td style="padding:8px 12px;font-size:11px;color:#666">场景式 Lab (填框架 + 生成报告)</td>
+      </tr>
+      <tr style="border-bottom:1px solid #eee;background:#fef2f2">
+        <td style="padding:8px 12px">6.5</td>
+        <td style="padding:8px 12px"><strong style="color:#E84142">OpenClaw 组织部署</strong></td>
+        <td style="padding:8px 12px">部署 + 多 Agent + 自动化</td>
+        <td style="padding:8px 12px;text-align:center"><span style="padding:2px 8px;background:#dcfce7;font-weight:700;color:#16a34a">复用</span></td>
+        <td style="padding:8px 12px"><strong>OpenClaw 方向</strong> Ch.1-5 (Getting Started)<br>Ch.10 (Multi-Agent Routing)<br>Ch.11 (Scheduled Tasks)</td>
+        <td style="padding:8px 12px;font-size:11px;color:#666">复用 OpenClaw 方向前 5 章 + 自动化章节，跳过纯开发内容 (Skill 开发/MCP 深度)</td>
       </tr>
 
       <!-- M8 -->

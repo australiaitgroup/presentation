@@ -1,3 +1,4 @@
+import { img } from '../../utils/img';
 import { motion } from 'framer-motion';
 import { Slide } from '../ui';
 import { colors, fonts } from '../../styles/theme';
@@ -82,7 +83,7 @@ export default function S02_WhoWeAre() {
 							overflow: 'hidden', transform: 'rotate(5deg)',
 						}}
 					>
-						<img src="/images/partnership-1.jpg" alt="活动" style={{ width: '100%', height: 240, objectFit: 'cover', display: 'block' }} onError={e => { (e.target as HTMLImageElement).parentElement!.style.display = 'none'; }} />
+						<img src={img("/images/partnership-1.jpg")} alt="活动" style={{ width: '100%', height: 240, objectFit: 'cover', display: 'block' }} onError={e => { (e.target as HTMLImageElement).parentElement!.style.display = 'none'; }} />
 					</motion.div>
 					<motion.div
 						initial={{ opacity: 0, rotate: -8 }}
@@ -94,7 +95,7 @@ export default function S02_WhoWeAre() {
 							overflow: 'hidden', transform: 'rotate(-3deg)',
 						}}
 					>
-						<img src="/images/event-slider-1.webp" alt="教室" style={{ width: '100%', height: 220, objectFit: 'cover', display: 'block' }} onError={e => { (e.target as HTMLImageElement).parentElement!.style.display = 'none'; }} />
+						<img src={img("/images/event-slider-1.webp")} alt="教室" style={{ width: '100%', height: 220, objectFit: 'cover', display: 'block' }} onError={e => { (e.target as HTMLImageElement).parentElement!.style.display = 'none'; }} />
 					</motion.div>
 					{/* Floating badge */}
 					<motion.div

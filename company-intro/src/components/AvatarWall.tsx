@@ -1,3 +1,4 @@
+import { img } from '../utils/img';
 import { motion } from 'framer-motion';
 
 const avatars = [
@@ -55,7 +56,7 @@ export default function AvatarWall({ opacity = 0.12, rows = 5, cols = 10, size =
 			{items.map((src, i) => (
 				<motion.img
 					key={i}
-					src={src}
+					src={img(src)}
 					alt=""
 					initial={{ opacity: 0, scale: 0.8 }}
 					animate={{ opacity: 1, scale: 1 }}

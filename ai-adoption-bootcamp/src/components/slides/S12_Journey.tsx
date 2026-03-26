@@ -23,7 +23,7 @@ export default function S12_Journey() {
 								border, background: s.color, boxShadow: shadow, padding: '20px 14px',
 								textAlign: 'center', minHeight: 160,
 								display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center',
-								color: [colors.indigo, colors.teal].includes(s.color) ? '#fff' : colors.black,
+								color: (s.color === colors.indigo || s.color === colors.teal) ? '#fff' : colors.black,
 							}}>
 								<div style={{ fontSize: 32, marginBottom: 8 }}>{s.icon}</div>
 								<div style={{ fontFamily: fonts.heading, fontWeight: 800, fontSize: 16, marginBottom: 6 }}>{s.title}</div>

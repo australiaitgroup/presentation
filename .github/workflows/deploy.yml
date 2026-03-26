@@ -30,11 +30,22 @@ jobs:
           bun install
           bun run build
 
+      # Build ai-adoption-bootcamp
+      - name: Build ai-adoption-bootcamp
+        working-directory: ai-adoption-bootcamp
+        run: |
+          bun install
+          bun run build
+
       # Assemble all presentations into one output
       - name: Assemble output
         run: |
           mkdir -p _site/company-intro
+          mkdir -p _site/ai-adoption-bootcamp
           cp -r company-intro/dist/* _site/company-intro/
+          cp -r ai-adoption-bootcamp/dist/* _site/ai-adoption-bootcamp/
+          # Copy curriculum.html as static page
+          cp ai-adoption-bootcamp/public/curriculum.html _site/ai-adoption-bootcamp/curriculum.html
           # Add index page listing all presentations
           cat > _site/index.html << 'HTMLEOF'
           <!DOCTYPE html>
@@ -49,12 +60,16 @@ jobs:
               h1 { font-size: 48px; font-weight: 900; margin-bottom: 32px; }
               a { display: inline-block; padding: 16px 32px; background: #ff5757; color: #fff; text-decoration: none; font-size: 18px; font-weight: 700; border: 3px solid #000; box-shadow: 6px 6px 0 #000; transition: all 0.15s; margin: 8px; }
               a:hover { box-shadow: none; transform: translate(4px, 4px); }
+              .secondary { background: #6366f1; }
+              .small { display: block; font-size: 13px; margin-top: 4px; opacity: 0.8; }
             </style>
           </head>
           <body>
             <div class="container">
               <h1>JR Academy<br>Presentations</h1>
               <a href="./company-intro/">公司介绍 Company Intro</a>
+              <a href="./ai-adoption-bootcamp/" class="secondary">AI Adoption Bootcamp<span class="small">Slide Deck</span></a>
+              <a href="./ai-adoption-bootcamp/curriculum.html" class="secondary">AI Adoption Bootcamp<span class="small">课程结构详情</span></a>
             </div>
           </body>
           </html>

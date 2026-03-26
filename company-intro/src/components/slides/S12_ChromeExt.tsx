@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { QRCodeSVG } from 'qrcode.react';
 import { Slide, Inner, Half, Title, Divider, Tag, Stagger, StaggerItem } from '../ui';
 import { colors } from '../../styles/theme';
+import { img } from '../../utils/img';
 
 interface Feature {
 	id: string;
@@ -226,7 +227,7 @@ export default function S12_ChromeExt() {
 						<div style={{ marginTop: 14, display: 'flex', alignItems: 'center', gap: 16 }}>
 							<div style={{ display: 'flex', gap: 4 }}>
 								{['styled-avatar--cyan', 'styled-avatar--green', 'styled-avatar--magenta', 'styled-avatar--red'].map(a => (
-									<img key={a} src={`/images/avatars/${a}.webp`} alt="" style={{ width: 24, height: 24, borderRadius: '50%', border: '1.5px solid rgba(255,255,255,0.3)' }} onError={e => { (e.target as HTMLImageElement).style.display = 'none'; }} />
+									<img key={a} src={img(`/images/avatars/${a}.webp`)} alt="" style={{ width: 24, height: 24, borderRadius: '50%', border: '1.5px solid rgba(255,255,255,0.3)' }} onError={e => { (e.target as HTMLImageElement).style.display = 'none'; }} />
 								))}
 							</div>
 							<span style={{ color: 'rgba(255,255,255,0.5)', fontSize: 12 }}>1,000+ 用户在用</span>

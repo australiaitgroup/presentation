@@ -1,3 +1,4 @@
+import { img } from '../../utils/img';
 import { Slide, Inner, Title, Subtitle, Stagger, StaggerItem } from '../ui';
 import { colors, border, shadowSm, shadow } from '../../styles/theme';
 
@@ -20,7 +21,7 @@ function PhotoCard({ src, caption, large }: { src: string; caption: string; larg
 			width: '100%', height: '100%', border, boxShadow: large ? shadow : shadowSm,
 			overflow: 'hidden', position: 'relative', background: '#e5e7eb',
 		}}>
-			<img src={src} alt={caption} loading="lazy" style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+			<img src={img(src)} alt={caption} loading="lazy" style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
 				onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }}
 			/>
 			<div style={{

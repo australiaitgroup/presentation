@@ -1,3 +1,4 @@
+import { img } from '../../utils/img';
 import { motion } from 'framer-motion';
 import { Slide } from '../ui';
 import { colors, fonts } from '../../styles/theme';
@@ -68,7 +69,7 @@ export default function S03_Impact() {
 							border: `4px solid ${colors.white}`, boxShadow: `8px 8px 0 ${colors.red}`,
 							overflow: 'hidden', transform: 'rotate(2deg)',
 						}}>
-							<img src="/images/offers-collage.webp" alt="Offer 截图" style={{ width: '100%', height: 'auto', display: 'block' }}
+							<img src={img("/images/offers-collage.webp")} alt="Offer 截图" style={{ width: '100%', height: 'auto', display: 'block' }}
 								onError={e => { (e.target as HTMLImageElement).parentElement!.style.display = 'none'; }}
 							/>
 						</div>

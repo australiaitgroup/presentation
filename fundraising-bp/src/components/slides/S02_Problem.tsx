@@ -6,7 +6,7 @@ const problems = [
 	{ icon: '🌏', title: '学完不会用', desc: '在线课程完成率不到 10%\n看了视频 ≠ 学会了 AI\n缺乏动手实操环境', bg: colors.yellow },
 	{ icon: '🧩', title: '只有碎片', desc: '九章只教算法\nLeetCode 只有题\n没人做全链路', bg: colors.green },
 	{ icon: '🏝️', title: '没有社群', desc: '学 AI 像孤岛\n没同伴、没导师、没归属感', bg: colors.blue },
-	{ icon: '🎯', title: '不关注就业', desc: '学了一堆课\n还是不知道怎么拿 Offer', bg: colors.purple },
+	{ icon: '🎯', title: '学了不会用', desc: '学了一堆理论\n到实际工作中还是不会\n用 AI 解决真实问题', bg: colors.purple },
 ];
 
 export default function S02_Problem() {

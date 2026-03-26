@@ -164,7 +164,7 @@ export default function S01_Cover() {
 					style={{ flex: 0.7, position: 'relative' }}
 				>
 					<div style={{
-						width: '100%', maxWidth: 440,
+						width: '100%', maxWidth: 560,
 						border: `5px solid ${colors.black}`,
 						boxShadow: `12px 12px 0 ${colors.black}`,
 						background: colors.yellow,

@@ -5,8 +5,8 @@ const categories = [
 	{ title: 'AI 学习中心', items: 'Vibe Coding · Prompt 大师 · AI Engineer · AI Builder · AI PM', bg: colors.blue, icon: '🧠' },
 	{ title: '互动实验室 ×6', items: 'Prompt Lab · Frontend Lab · Python Lab · AWS Lab · Vibe Coding Lab · Git Lab', bg: colors.green, icon: '⚡' },
 	{ title: '认证中心 350+', items: 'AWS · Azure · GCP · CNCF · CompTIA · Salesforce · Scrum · 更多', bg: colors.orange, icon: '🏆' },
-	{ title: '职业工具链', items: 'AI 简历编辑 · AI 模拟面试 · 内推平台 · P3 孵化器 · VIP 1v1 辅导', bg: colors.purple, icon: '🚀' },
-	{ title: 'Chrome 插件 ×3', items: '考证匠 AI Tutor · 求职匠 Job Hunter · 牛小匠 Uni Helper', bg: colors.red, icon: '🔌' },
+	{ title: 'AI 工具链', items: 'AI Chat 助手 · AI 代码调试 · AI 内容生成 · P3 项目实战 · VIP 1v1 辅导', bg: colors.purple, icon: '🚀' },
+	{ title: 'Chrome 插件 ×3', items: '考证匠 AI Tutor · 求职匠 Job Tracker · 牛小匠 Uni Helper', bg: colors.red, icon: '🔌' },
 	{ title: '移动端 + 企业', items: 'CertMaster App · B2B 团队方案 · 企业定制培训 · 批量认证授权', bg: colors.dark, icon: '📱' },
 ];
 

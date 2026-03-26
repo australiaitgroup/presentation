@@ -3,5 +3,5 @@ import react from '@vitejs/plugin-react';
 
 export default defineConfig({
   plugins: [react()],
-  base: '/presentation/ai-adoption-bootcamp/',
+  base: process.env.NODE_ENV === 'production' ? '/presentation/ai-adoption-bootcamp/' : '/',
 });

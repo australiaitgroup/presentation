@@ -81,7 +81,7 @@ export default function S01_Cover() {
 
 				<motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.6 }} style={{ marginTop: 36 }}>
 					<div style={{ display: 'flex', gap: 20, flexWrap: 'wrap' }}>
-						{['8 年运营', '10,000+ 学员', '4,000+ Offer', '600+ 导师'].map((t, i) => (
+						{['8 年运营', '10,000+ 学员', '350+ 认证', '600+ 导师'].map((t, i) => (
 							<motion.span
 								key={t}
 								initial={{ opacity: 0, y: 20 }}

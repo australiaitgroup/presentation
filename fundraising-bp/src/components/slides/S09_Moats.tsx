@@ -8,7 +8,7 @@ const moats = [
 	},
 	{
 		title: '数据壁垒', sub: '独有数据资产', color: colors.blue,
-		points: ['1,819 门大学课程索引', '10,000+ 真实面试题库', '1,120 条导师专长图谱', '4,000+ Offer 就业追踪'],
+		points: ['1,819 门大学课程索引', '10,000+ 真实面试题库', '1,120 条导师专长图谱', '6,000+ Offer 就业追踪'],
 	},
 	{
 		title: '产品壁垒', sub: '2-3 年 + $2M 的领先', color: colors.green,
@@ -16,7 +16,7 @@ const moats = [
 	},
 	{
 		title: '品牌壁垒', sub: '品类即品牌', color: colors.purple,
-		points: ['"匠人了吗？" = "学 AI 了吗？"', '4,000 Offer = 4,000 个活广告', '朋友圈·小红书·LinkedIn 传播'],
+		points: ['"匠人了吗？" = "学 AI 了吗？"', '6,000 Offer = 6,000 个活广告', '朋友圈·小红书·LinkedIn 传播'],
 	},
 ];
 

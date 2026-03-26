@@ -29,13 +29,13 @@ export default function S13_P3() {
 				</Stagger>
 				<Half style={{ gap: 12, alignItems: 'center' }}>
 					{/* P3 header image from repo */}
-					<div style={{ width: '100%', maxWidth: 500, border, boxShadow: shadow, overflow: 'hidden', transform: 'rotate(1deg)' }}>
+					<div style={{ width: '100%', maxWidth: 560, border, boxShadow: shadow, overflow: 'hidden', transform: 'rotate(1deg)' }}>
 						<img src={img("/images/meta-image-project.webp")} alt="P3 虚拟办公室" style={{ width: '100%', height: 'auto', display: 'block' }}
 							onError={(e) => { (e.target as HTMLImageElement).parentElement!.style.display = 'none'; }}
 						/>
 					</div>
 					{/* Partnership photo */}
-					<div style={{ width: '100%', maxWidth: 500, transform: 'rotate(-1.5deg)', border, boxShadow: shadowSm, overflow: 'hidden' }}>
+					<div style={{ width: '100%', maxWidth: 560, transform: 'rotate(-1.5deg)', border, boxShadow: shadowSm, overflow: 'hidden' }}>
 						<img src={img("/images/partnership-2.jpg")} alt="P3 团队协作" style={{ width: '100%', height: 'auto', display: 'block', maxHeight: 180, objectFit: 'cover' }}
 							onError={(e) => { (e.target as HTMLImageElement).parentElement!.style.display = 'none'; }}
 						/>

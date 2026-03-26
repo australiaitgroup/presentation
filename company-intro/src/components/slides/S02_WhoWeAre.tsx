@@ -72,7 +72,7 @@ export default function S02_WhoWeAre() {
 				</div>
 
 				{/* Right — stacked photos */}
-				<div style={{ flex: 0.8, position: 'relative', height: 420 }}>
+				<div style={{ flex: 1, position: 'relative', height: 480 }}>
 					<motion.div
 						initial={{ opacity: 0, rotate: 10 }}
 						animate={{ opacity: 1, rotate: 5 }}
@@ -83,7 +83,7 @@ export default function S02_WhoWeAre() {
 							overflow: 'hidden', transform: 'rotate(5deg)',
 						}}
 					>
-						<img src={img("/images/partnership-1.jpg")} alt="活动" style={{ width: '100%', height: 240, objectFit: 'cover', display: 'block' }} onError={e => { (e.target as HTMLImageElement).parentElement!.style.display = 'none'; }} />
+						<img src={img("/images/partnership-1.jpg")} alt="活动" style={{ width: '100%', height: 300, objectFit: 'cover', display: 'block' }} onError={e => { (e.target as HTMLImageElement).parentElement!.style.display = 'none'; }} />
 					</motion.div>
 					<motion.div
 						initial={{ opacity: 0, rotate: -8 }}
@@ -95,7 +95,7 @@ export default function S02_WhoWeAre() {
 							overflow: 'hidden', transform: 'rotate(-3deg)',
 						}}
 					>
-						<img src={img("/images/event-slider-1.webp")} alt="教室" style={{ width: '100%', height: 220, objectFit: 'cover', display: 'block' }} onError={e => { (e.target as HTMLImageElement).parentElement!.style.display = 'none'; }} />
+						<img src={img("/images/event-slider-1.webp")} alt="教室" style={{ width: '100%', height: 280, objectFit: 'cover', display: 'block' }} onError={e => { (e.target as HTMLImageElement).parentElement!.style.display = 'none'; }} />
 					</motion.div>
 					{/* Floating badge */}
 					<motion.div

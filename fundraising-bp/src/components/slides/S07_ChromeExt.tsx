@@ -8,9 +8,9 @@ const extensions = [
 		insight: '用户在刷题时，一键呼出 AI',
 	},
 	{
-		name: '求职匠 Job Hunter', ver: 'v0.2.0', target: '求职者', color: colors.blue,
-		features: ['LinkedIn/Seek/Indeed JD 自动提取', 'AI 技能匹配 + 薪资分析', 'LinkedIn 资料/公司分析', '右键快捷分析'],
-		insight: '用户在求职网站时，AI 在身边',
+		name: '求职匠 Job Tracker', ver: 'v0.2.0', target: '职场人', color: colors.blue,
+		features: ['LinkedIn/Seek/Indeed 信息自动提取', 'AI 技能匹配 + 行业分析', 'LinkedIn 资料/公司分析', '右键快捷分析'],
+		insight: '用户在浏览行业信息时，AI 在身边',
 	},
 	{
 		name: '牛小匠 Uni Helper', ver: 'v0.1.3', target: '大学生', color: colors.green,

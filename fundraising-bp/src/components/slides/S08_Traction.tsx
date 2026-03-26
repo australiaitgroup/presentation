@@ -5,12 +5,12 @@ import { colors, fonts } from '../../styles/theme';
 const bigStats = [
 	{ num: '8 年', label: '持续运营', bg: colors.red, color: '#fff', rotate: -2 },
 	{ num: '10,000+', label: '累计学员', bg: colors.yellow, color: '#000', rotate: 2 },
-	{ num: '4,000+', label: '成功 Offer', bg: colors.green, color: '#000', rotate: -1 },
+	{ num: '350+', label: 'IT 认证课程', bg: colors.green, color: '#000', rotate: -1 },
 	{ num: '600+', label: '一线导师', bg: colors.blue, color: '#fff', rotate: 3 },
 ];
 
 const smallStats = [
-	{ num: '350+', label: 'IT 认证覆盖' },
+	{ num: '6 种', label: '互动实验室' },
 	{ num: '200+', label: '年度线下活动' },
 	{ num: '7+ 城市', label: '澳洲全覆盖' },
 	{ num: '5+ 国家', label: '全球服务' },

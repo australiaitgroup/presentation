@@ -63,7 +63,7 @@ export default function S03_Impact() {
 						initial={{ opacity: 0, rotate: 5 }}
 						animate={{ opacity: 1, rotate: 2 }}
 						transition={{ delay: 0.5 }}
-						style={{ flex: 0.7, position: 'relative' }}
+						style={{ flex: 0.9, position: 'relative' }}
 					>
 						<div style={{
 							border: `4px solid ${colors.white}`, boxShadow: `8px 8px 0 ${colors.red}`,

@@ -46,7 +46,7 @@ export default function S15_Events() {
 					width: '100%', maxWidth: 1100,
 					display: 'grid',
 					gridTemplateColumns: '1.5fr 1fr 1fr 1fr',
-					gridTemplateRows: '160px 130px',
+					gridTemplateRows: '200px 160px',
 					gap: 10,
 				}}>
 					<StaggerItem style={{ gridRow: '1 / 3' }}>

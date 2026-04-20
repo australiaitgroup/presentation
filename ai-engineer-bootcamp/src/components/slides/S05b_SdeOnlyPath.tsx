@@ -2,18 +2,18 @@ import { motion } from 'framer-motion';
 import { Slide, colors, fonts, border, shadow } from '../ui';
 
 const traditionalStack = [
-	{ label: 'CRUD 接口', note: 'AI 已经能一句话生成' },
-	{ label: 'REST / GraphQL', note: '模板化工作 · AI 补全率 >80%' },
+	{ label: 'CRUD 接口 / REST / GraphQL', note: 'AI 补全率 >80% · 模板化工作' },
 	{ label: '基础前端页面', note: 'v0.dev · bolt.new · Cursor 已经替代' },
 	{ label: '单元测试', note: 'Claude Code 一键覆盖' },
-	{ label: '常规 DevOps 脚本', note: 'AI 写得比人快' },
+	{ label: 'Terraform / K8s yaml / CI/CD 配置', note: 'AI 写得比人快 · DevOps 模板化部分被吃掉' },
+	{ label: 'Shell / Bash 运维脚本', note: 'AI 一句话生成 · 不再是核心壁垒' },
 ];
 
 const aiEngineerStack = [
 	{ label: 'RAG / GraphRAG 系统设计', note: '涉及业务 + 数据 + 检索策略' },
 	{ label: 'Multi-Agent 编排', note: '需要理解 LangGraph + A2A + 状态机' },
 	{ label: 'MCP Server 工程集成', note: '把 AI 接进企业业务，AI 自己做不了' },
-	{ label: 'AI Eval + 可观测', note: '模型怎么错的、怎么修，只有人能判' },
+	{ label: 'LLMOps · AI Eval · 可观测', note: 'SRE / DevOps 的天然延伸 — 模型怎么错、怎么修，只有人能判' },
 	{ label: 'Fine-Tuning + Harness', note: '训练决策 + 工程方法论 · AI 替代不了' },
 ];
 
@@ -54,7 +54,7 @@ export default function S05b_SdeOnlyPath() {
 						marginBottom: 10,
 					}}
 				>
-					普通 SDE / Full Stack 的<br />
+					普通 SDE / Full Stack / DevOps 的<br />
 					<span style={{
 						display: 'inline-block',
 						padding: '2px 18px',
@@ -108,7 +108,7 @@ export default function S05b_SdeOnlyPath() {
 							color: 'rgba(255,255,255,0.55)',
 							marginBottom: 10,
 						}}>
-							TRADITIONAL · SDE / FULL-STACK
+							TRADITIONAL · SDE / FULL-STACK / DEVOPS
 						</div>
 						<div style={{
 							fontFamily: fonts.heading,

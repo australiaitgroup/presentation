@@ -5,7 +5,7 @@ import { colors, fonts, border, shadow, shadowSm } from '../styles/theme';
 /* ---- Slide Layout ---- */
 export function Slide({ bg = colors.warmBg, children, style }: { bg?: string; children: ReactNode; style?: CSSProperties }) {
 	return (
-		<div style={{ width: '100%', height: '100%', background: bg, display: 'flex', alignItems: 'center', justifyContent: 'center', overflow: 'hidden', ...style }}>
+		<div style={{ width: 1920, height: 1080, background: bg, display: 'flex', alignItems: 'center', justifyContent: 'center', overflow: 'hidden', ...style }}>
 			{children}
 		</div>
 	);

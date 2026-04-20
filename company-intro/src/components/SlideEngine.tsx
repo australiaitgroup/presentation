@@ -2,16 +2,33 @@ import { useState, useEffect, useCallback, useRef, type ReactNode } from 'react'
 import { motion, AnimatePresence } from 'framer-motion';
 import { colors } from '../styles/theme';
 
+// Fixed design dimensions — no responsive scaling
+const DESIGN_W = 1920;
+const DESIGN_H = 1080;
+
 interface SlideEngineProps {
 	children: ReactNode[];
 }
 
 export default function SlideEngine({ children }: SlideEngineProps) {
 	const [current, setCurrent] = useState(0);
+	const [scale, setScale] = useState(1);
 	const total = children.length;
 	const isAnimating = useRef(false);
 	const touchStart = useRef({ x: 0, y: 0 });
 	const wheelTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+	// Calculate scale to fit viewport while maintaining 16:9
+	useEffect(() => {
+		const updateScale = () => {
+			const scaleX = window.innerWidth / DESIGN_W;
+			const scaleY = window.innerHeight / DESIGN_H;
+			setScale(Math.min(scaleX, scaleY));
+		};
+		updateScale();
+		window.addEventListener('resize', updateScale);
+		return () => window.removeEventListener('resize', updateScale);
+	}, []);
 
 	const go = useCallback((index: number) => {
 		if (isAnimating.current || index < 0 || index >= total || index === current) return;
@@ -85,7 +102,7 @@ export default function SlideEngine({ children }: SlideEngineProps) {
 	const pad = (n: number) => String(n).padStart(2, '0');
 
 	return (
-		<div style={{ width: '100vw', height: '100vh', position: 'relative', overflow: 'hidden' }}>
+		<div style={{ width: '100vw', height: '100vh', position: 'relative', overflow: 'hidden', background: '#000', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
 			{/* Progress bar */}
 			<div style={{ position: 'fixed', top: 0, left: 0, width: '100%', height: 4, background: 'rgba(255,255,255,0.1)', zIndex: 1000 }}>
 				<motion.div animate={{ width: `${((current + 1) / total) * 100}%` }} transition={{ duration: 0.3 }} style={{ height: '100%', background: colors.red }} />
@@ -120,30 +137,28 @@ export default function SlideEngine({ children }: SlideEngineProps) {
 			<NavArrow direction="prev" onClick={prev} disabled={current === 0} />
 			<NavArrow direction="next" onClick={next} disabled={current === total - 1} />
 
-			{/* Slides — fixed 16:9 ratio, centered */}
+			{/* Slide viewport — fixed 1920x1080, scaled to fit screen */}
 			<div style={{
-				width: '100%', height: '100%',
-				display: 'flex', alignItems: 'center', justifyContent: 'center',
-				background: '#000',
+				width: DESIGN_W,
+				height: DESIGN_H,
+				transform: `scale(${scale})`,
+				transformOrigin: 'center center',
+				position: 'relative',
+				overflow: 'hidden',
+				flexShrink: 0,
 			}}>
-				<div style={{
-					width: '100%', maxHeight: '100vh',
-					aspectRatio: '16 / 9',
-					position: 'relative', overflow: 'hidden',
-				}}>
-					<AnimatePresence mode="wait">
-						<motion.div
-							key={current}
-							initial={{ opacity: 0, x: 80 }}
-							animate={{ opacity: 1, x: 0 }}
-							exit={{ opacity: 0, x: -80 }}
-							transition={{ duration: 0.4, ease: [0.25, 0.46, 0.45, 0.94] }}
-							style={{ width: '100%', height: '100%' }}
-						>
-							{children[current]}
-						</motion.div>
-					</AnimatePresence>
-				</div>
+				<AnimatePresence mode="wait">
+					<motion.div
+						key={current}
+						initial={{ opacity: 0, x: 80 }}
+						animate={{ opacity: 1, x: 0 }}
+						exit={{ opacity: 0, x: -80 }}
+						transition={{ duration: 0.4, ease: [0.25, 0.46, 0.45, 0.94] }}
+						style={{ width: '100%', height: '100%' }}
+					>
+						{children[current]}
+					</motion.div>
+				</AnimatePresence>
 			</div>
 		</div>
 	);

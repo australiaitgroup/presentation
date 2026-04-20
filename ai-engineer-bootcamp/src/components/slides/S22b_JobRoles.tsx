@@ -25,7 +25,7 @@ const jobs: JobRole[] = [
 		growthNote: '300%+',
 		skills: ['LLM', 'RAG', 'AI Agent', 'Prompt', 'AI Coding'],
 		companies: ['OpenAI', 'Anthropic', 'Google', 'Meta', 'Stripe'],
-		bornYear: 2024,
+		bornYear: 2026,
 	},
 	{
 		id: 'fde',
@@ -35,7 +35,7 @@ const jobs: JobRole[] = [
 		growth: 'explosive',
 		skills: ['全栈工程', '快速原型', 'LLM 应用', '客户现场'],
 		companies: ['OpenAI', 'Anthropic', 'Palantir', 'Scale AI'],
-		bornYear: 2024,
+		bornYear: 2026,
 	},
 	{
 		id: 'agent-dev',
@@ -46,38 +46,47 @@ const jobs: JobRole[] = [
 		growthNote: '986%',
 		skills: ['Multi-Agent', 'LangChain', '工作流编排', 'MCP'],
 		companies: ['OpenAI', 'Microsoft', 'Salesforce'],
-		bornYear: 2024,
+		bornYear: 2026,
+	},
+];
+
+interface CompareRow {
+	label: string;
+	items: [string, string, string]; // AI Engineer / FDE / Agent Dev
+}
+
+const compareRows: CompareRow[] = [
+	{
+		label: '工作模式',
+		items: [
+			'在公司内部做 AI 产品',
+			'飞到客户现场 2–8 周快速搭原型',
+			'设计多智能体工作流 + 编排系统',
+		],
 	},
 	{
-		id: 'context-eng',
-		nameEn: 'Context Engineer',
-		nameZh: '上下文工程师',
-		salary: '$130K – $220K+',
-		growth: 'explosive',
-		skills: ['LLM', 'RAG', '系统设计', 'Context Window'],
-		companies: ['OpenAI', 'Shopify', 'Google'],
-		bornYear: 2025,
+		label: '技能侧重',
+		items: [
+			'LLM 应用 + 产品迭代',
+			'全栈 + LLM + 沟通谈判（3 合 1）',
+			'Multi-Agent + MCP + 工作流',
+		],
 	},
 	{
-		id: 'rag-eng',
-		nameEn: 'RAG Engineer',
-		nameZh: 'RAG 工程师',
-		salary: '$120K – $200K+',
-		growth: 'explosive',
-		skills: ['向量数据库', 'Embedding', 'LLM', 'Hybrid Search'],
-		companies: ['Pinecone', 'Microsoft', 'ANZ Bank', 'DBS'],
-		bornYear: 2024,
+		label: '成功标准',
+		items: [
+			'产品指标 / 用户增长',
+			'客户买单 + 续约',
+			'Agent 成功率 + 任务完成度',
+		],
 	},
 	{
-		id: 'mlops',
-		nameEn: 'MLOps Engineer',
-		nameZh: 'MLOps 工程师',
-		salary: '$120K – $200K',
-		growth: 'fast',
-		growthNote: '9.8x / 5y',
-		skills: ['ML Pipeline', 'K8s', '模型部署', 'CI/CD'],
-		companies: ['Netflix', 'Grab', 'Atlassian'],
-		bornYear: 2023,
+		label: '薪资天花板',
+		items: [
+			'$400K+',
+			'$500K+ · 工程师 + 咨询 + 销售 三份工',
+			'$250K+ · Multi-Agent 技术溢价',
+		],
 	},
 ];
 
@@ -117,7 +126,7 @@ export default function S22b_JobRoles() {
 							border,
 							boxShadow: shadowSm,
 						}}>
-							JOB OUTCOMES · 6 个直通岗位
+							JOB OUTCOMES · 3 个直通岗位
 						</div>
 						<div style={{
 							fontFamily: fonts.mono,
@@ -150,7 +159,7 @@ export default function S22b_JobRoles() {
 						}}>
 							直接去投
 						</span>{' '}
-						这 6 个岗位
+						这 3 个岗位
 					</h2>
 				</motion.div>
 
@@ -303,13 +312,136 @@ export default function S22b_JobRoles() {
 					})}
 				</div>
 
+				{/* 三个岗位的核心区别 — 对比表 */}
+				<motion.div
+					initial={{ opacity: 0, y: 16 }}
+					animate={{ opacity: 1, y: 0 }}
+					transition={{ duration: 0.4, delay: 0.7 }}
+					style={{
+						marginTop: 14,
+						background: colors.white,
+						border,
+						boxShadow: shadow,
+						padding: '12px 14px',
+					}}
+				>
+					<div style={{
+						display: 'flex',
+						alignItems: 'center',
+						gap: 10,
+						marginBottom: 10,
+					}}>
+						<div style={{
+							padding: '3px 10px',
+							background: colors.black,
+							color: colors.yellow,
+							fontFamily: fonts.mono,
+							fontSize: 10,
+							fontWeight: 800,
+							letterSpacing: 0.8,
+						}}>
+							COMPARE · 三者区别
+						</div>
+						<div style={{
+							fontFamily: fonts.heading,
+							fontSize: 'clamp(13px, 1.35vw, 16px)',
+							fontWeight: 900,
+							color: colors.black,
+							letterSpacing: -0.3,
+						}}>
+							同属 AI 工程，工作方式完全不同
+						</div>
+					</div>
+
+					<div style={{
+						display: 'grid',
+						gridTemplateColumns: '110px repeat(3, 1fr)',
+						gap: 0,
+						border: `1.5px solid ${colors.black}`,
+					}}>
+						{/* 表头 */}
+						<div style={{
+							background: colors.black,
+							color: colors.white,
+							padding: '6px 10px',
+							fontFamily: fonts.mono,
+							fontSize: 10,
+							fontWeight: 800,
+							letterSpacing: 0.5,
+						}}>
+							维度
+						</div>
+						{(['AI Engineer', 'FDE', 'Agent Developer'] as const).map((h) => (
+							<div key={h} style={{
+								background: colors.black,
+								color: colors.yellow,
+								padding: '6px 10px',
+								fontFamily: fonts.mono,
+								fontSize: 10,
+								fontWeight: 800,
+								letterSpacing: 0.5,
+								borderLeft: `1.5px solid ${colors.yellow}`,
+							}}>
+								{h}
+							</div>
+						))}
+
+						{/* 数据行 */}
+						{compareRows.map((row, idx) => (
+							<div key={row.label} style={{ display: 'contents' }}>
+								<div style={{
+									background: idx % 2 === 0 ? '#fafafa' : colors.white,
+									padding: '7px 10px',
+									fontFamily: fonts.mono,
+									fontSize: 11,
+									fontWeight: 800,
+									color: colors.black,
+									borderTop: idx === 0 ? 'none' : '1px solid #e4e4e4',
+									letterSpacing: 0.3,
+								}}>
+									{row.label}
+								</div>
+								{row.items.map((cell, ci) => (
+									<div
+										key={ci}
+										style={{
+											background: idx % 2 === 0 ? '#fafafa' : colors.white,
+											padding: '7px 10px',
+											fontFamily: fonts.body,
+											fontSize: 11,
+											fontWeight: 600,
+											color: '#222',
+											lineHeight: 1.35,
+											borderTop: idx === 0 ? 'none' : '1px solid #e4e4e4',
+											borderLeft: '1px solid #e4e4e4',
+										}}
+									>
+										{cell}
+									</div>
+								))}
+							</div>
+						))}
+					</div>
+
+					<div style={{
+						marginTop: 8,
+						fontFamily: fonts.mono,
+						fontSize: 10.5,
+						color: '#555',
+						fontWeight: 700,
+						letterSpacing: 0.2,
+					}}>
+						一句话记忆 · <span style={{ color: colors.black, fontWeight: 900 }}>AI Engineer</span> 做产品 · <span style={{ color: colors.red, fontWeight: 900 }}>FDE</span> 带代码去客户公司 · <span style={{ color: colors.black, fontWeight: 900 }}>Agent Dev</span> 造智能体
+					</div>
+				</motion.div>
+
 				{/* 底部 CTA */}
 				<motion.div
 					initial={{ opacity: 0, y: 14 }}
 					animate={{ opacity: 1, y: 0 }}
 					transition={{ duration: 0.4, delay: 0.9 }}
 					style={{
-						marginTop: 14,
+						marginTop: 10,
 						padding: '10px 18px',
 						background: colors.dark,
 						color: colors.white,

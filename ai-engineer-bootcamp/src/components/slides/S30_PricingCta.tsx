@@ -142,6 +142,27 @@ export default function S30_PricingCta() {
 								}}>
 									折合每周约 AUD 150 · 覆盖技术课 12 周 + P3 孵化 12 周
 								</div>
+
+								{/* 澳洲退税 */}
+								<div style={{
+									marginTop: 10, padding: '8px 12px',
+									background: '#E6F0FF', color: '#0B2A6B',
+									border: `3px solid ${colors.black}`,
+									boxShadow: `4px 4px 0 ${colors.black}`,
+								}}>
+									<div style={{
+										fontFamily: fonts.mono, fontSize: 10, fontWeight: 800,
+										letterSpacing: 1, color: '#0B2A6B',
+									}}>
+										🇦🇺 AUSTRALIA · Self-education 退税
+									</div>
+									<div style={{
+										fontFamily: fonts.heading, fontSize: 'clamp(11px,1.1vw,14px)',
+										fontWeight: 800, lineHeight: 1.4, marginTop: 2,
+									}}>
+										澳洲学员按 37% 税率可抵税约 <span style={{ color: colors.red }}>AUD 1,332</span>，实付约 <span style={{ color: colors.red }}>AUD 2,268</span>
+									</div>
+								</div>
 							</div>
 
 							{/* 福利 */}
@@ -242,22 +263,79 @@ export default function S30_PricingCta() {
 					</motion.div>
 				</div>
 
-				{/* 底部小字 */}
+				{/* 底部：其他学习路径 + 报名进度 */}
 				<motion.div
 					initial={{ opacity: 0 }}
 					animate={{ opacity: 1 }}
 					transition={{ duration: 0.5, delay: 1 }}
-					style={{
-						padding: '8px 14px', background: 'rgba(255,255,255,0.08)',
+					style={{ display: 'flex', flexDirection: 'column', gap: 6 }}
+				>
+					{/* 其他学习路径对比 */}
+					<div style={{
+						background: colors.white, color: colors.black,
+						border: `3px solid ${colors.black}`,
+						boxShadow: `4px 4px 0 rgba(255,255,255,0.3)`,
+						padding: '8px 14px',
+						display: 'flex', alignItems: 'center',
+						gap: 12, flexWrap: 'wrap',
+					}}>
+						<div style={{
+							fontFamily: fonts.mono, fontSize: 'clamp(9px,0.85vw,11px)',
+							fontWeight: 900, letterSpacing: 1, color: '#555',
+							whiteSpace: 'nowrap',
+						}}>
+							其他 AI ENGINEER 学习路径 →
+						</div>
+
+						{/* 当前方案 */}
+						<div style={{
+							display: 'flex', alignItems: 'center', gap: 6,
+							padding: '3px 8px', background: colors.yellow,
+							border: `2px solid ${colors.black}`,
+						}}>
+							<span style={{
+								fontFamily: fonts.mono, fontSize: 'clamp(9px,0.85vw,11px)',
+								fontWeight: 900, color: colors.red,
+							}}>★ 当前</span>
+							<span style={{
+								fontFamily: fonts.heading, fontSize: 'clamp(10px,1vw,13px)',
+								fontWeight: 800,
+							}}>
+								Bootcamp V5 · AUD 3,600 · 24 周 · Live + P3 · 冲就业
+							</span>
+						</div>
+
+						{/* 自学课 */}
+						<div style={{
+							display: 'flex', alignItems: 'center', gap: 6,
+							padding: '3px 8px',
+							border: `2px solid #999`,
+						}}>
+							<span style={{
+								fontFamily: fonts.mono, fontSize: 'clamp(9px,0.85vw,11px)',
+								fontWeight: 700, color: '#666',
+							}}>SELF-PACED</span>
+							<span style={{
+								fontFamily: fonts.heading, fontSize: 'clamp(10px,1vw,13px)',
+								fontWeight: 700, color: '#333',
+							}}>
+								AI Engineer 入门 · AUD 299 · 4 周 · 视频 + Lab · 打基础
+							</span>
+						</div>
+					</div>
+
+					{/* 报名进度 */}
+					<div style={{
+						padding: '6px 14px', background: 'rgba(255,255,255,0.08)',
 						border: '2px solid rgba(255,255,255,0.15)',
 						fontFamily: fonts.mono, fontSize: 'clamp(10px,1vw,12px)',
 						color: 'rgba(255,255,255,0.85)', fontWeight: 600,
 						textAlign: 'center', letterSpacing: 0.5,
-					}}
-				>
-					{/* TODO(讲师回填): 真实已报 / 剩余名额数 */}
-					已有 <span style={{ color: colors.yellow, fontWeight: 900 }}>23</span> 位同学锁定名额 ·
-					剩余 <span style={{ color: colors.red, fontWeight: 900 }}>7</span> 席
+					}}>
+						{/* TODO(讲师回填): 真实已报 / 剩余名额数 */}
+						已有 <span style={{ color: colors.yellow, fontWeight: 900 }}>23</span> 位同学锁定名额 ·
+						剩余 <span style={{ color: colors.red, fontWeight: 900 }}>7</span> 席
+					</div>
 				</motion.div>
 			</div>
 		</Slide>

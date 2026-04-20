@@ -56,7 +56,7 @@ const LAYERS: LayerDef[] = [
 		id: 'l3', num: '③', name: 'Memory & Knowledge', cn: '持久记忆 & 知识库',
 		stack: 'SQLite · FTS5 · Honcho', cols: 4,
 		modules: [
-			{ id: 'mem',        kicker: 'MEMORY',     name: 'Conversation Memory', cn: '会话记忆',         bullets: ['SQLite + FTS5', '10ms 召回 / 10k+'] },
+			{ id: 'mem',        kicker: 'MEMORY',     name: 'Conversation Memory', cn: 'STM + LTM 双层记忆', bullets: ['STM: Ring Buffer · 近 N 轮对话', 'LTM: SQLite+FTS5 · 10ms 召回', '跨会话持久化 · 10k+ 记录'] },
 			{ id: 'codekb',     kicker: 'CODE KB',    name: 'Source Code KB',      cn: '源码知识库',       bullets: ['向量存储 · AST 索引', '增量 diff'] },
 			{ id: 'skills-hub', kicker: 'SKILLS HUB', name: 'Skills Hub',          cn: '技能库',           bullets: ['需求/架构/代码/测试', '多语言技能'] },
 			{ id: 'archive',    kicker: 'AUDIT',      name: 'Change Archive',      cn: '变更归档',         bullets: ['每次独立归档', '全量检索'] },
@@ -77,10 +77,10 @@ const LAYERS: LayerDef[] = [
 		id: 'l5', num: '⑤', name: 'Delivery Pipeline', cn: '研发流水线四阶段',
 		stack: '需求 → 设计 → 开发 → 测试 / UAT', cols: 4,
 		modules: [
-			{ id: 's1', kicker: 'STAGE · 01', name: '📋 需求阶段',  cn: 'Requirements',  bullets: ['HUMAN 录入原始需求', 'AI 澄清 + 结构化入库', 'GATE ✓ 人工确认'] },
-			{ id: 's2', kicker: 'STAGE · 02', name: '🎨 设计阶段',  cn: 'Design',        bullets: ['AI 读记忆 · 生成方案', 'HUMAN 审阅', 'GATE ✓ 确认'] },
-			{ id: 's3', kicker: 'STAGE · 03', name: '💻 开发阶段',  cn: 'Development',   bullets: ['AI 全自动生成代码', 'Docker 单元测试 · Atropos', 'PR · Skill 归档'] },
-			{ id: 's4', kicker: 'STAGE · 04', name: '🧪 测试 / UAT', cn: 'Test / UAT',   bullets: ['HUMAN UAT 验收', 'GATE ✓ 通过', 'AI 触发 CI/CD 部署'] },
+			{ id: 's1', kicker: 'STAGE · 01', name: '📋 需求阶段',  cn: 'Requirements · 独立 Agent Task',  bullets: ['👤 人工录入原始需求 / 缺陷', '🤖 Hermes 分析 · 澄清提问', '🤝 多轮对话确认（最多 3 轮）', '🤖 需求结构化写入记忆库', '✓ 人工点击确认 → 流转', '🧩 Skill 自动归档「需求模式」'] },
+			{ id: 's2', kicker: 'STAGE · 02', name: '🎨 设计阶段',  cn: 'Design · 独立 Agent Task',        bullets: ['🤖 读取记忆库需求', '🤖 生成方案·接口·DB 变更（DB MCP）', '👤 Tab 弹窗审阅 · 可多轮修改', '🤖 设计文档写入记忆库', '✓ 人工点击确认 → 流转', '🧩 Skill 归档「设计模式」'] },
+			{ id: 's3', kicker: 'STAGE · 03', name: '💻 开发阶段',  cn: 'Development · 完全自动化',   bullets: ['🤖 只读需求+设计记忆', '🤖 生成代码（Git MCP）· 日志流实时推送', '🤖 Docker 沙箱单测 · Atropos 轨迹', '🔁 测试失败 → 自动重试修复', '🤖 提交 PR（Git MCP 自动操作）', '🧩 Skill 归档「编码模式」进化'] },
+			{ id: 's4', kicker: 'STAGE · 04', name: '🧪 测试 / UAT', cn: 'Test / UAT · 人机终审',   bullets: ['👤 Tab 弹窗 UAT 测试记录', '🔁 不通过 → 打回开发循环', '✓ 人工 UAT 验收通过', '🤖 AI 生成变更说明（需求→代码→测试）', '🤖 触发 CI/CD 部署（CI/CD MCP）', '🧩 Skill 全量归档 · 待部署状态'] },
 		],
 	},
 ];
@@ -266,6 +266,11 @@ export default function S20b_DemoHermes() {
 					color: var(--ink-3); font-family: "JetBrains Mono", monospace;
 					font-size: 11px; letter-spacing: .1em; margin-top: 3px; text-transform: uppercase;
 				}
+				.hermes-brandline {
+					color: var(--accent); font-family: "JetBrains Mono", monospace;
+					font-size: 9.5px; letter-spacing: .14em; margin-top: 2px; font-weight: 600;
+					text-transform: uppercase; opacity: .78;
+				}
 				.hermes-meta {
 					font-family: "JetBrains Mono", monospace; font-size: 11px;
 					color: var(--ink-3); text-align: right; line-height: 1.6;
@@ -418,6 +423,7 @@ export default function S20b_DemoHermes() {
 						<div>
 							<h1>Hermes Agent <span className="cn">通用研发 Agent 架构</span></h1>
 							<div className="hermes-sub">DEMO ④ · Claude Design Blueprint · 5-Layer Reference</div>
+							<div className="hermes-brandline">匠人学院 · JR Academy · AI Engineer Bootcamp V5</div>
 						</div>
 					</div>
 					<div className="hermes-meta">

@@ -107,7 +107,7 @@ export default function SlideEngine({ children }: SlideEngineProps) {
 			<NavArrow direction="prev" onClick={prev} disabled={current === 0} />
 			<NavArrow direction="next" onClick={next} disabled={current === total - 1} />
 			<div style={{ width: '100%', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', background: '#000' }}>
-				<div style={{ width: '100%', maxHeight: '100vh', aspectRatio: '16 / 9', position: 'relative', overflow: 'hidden' }}>
+				<div style={{ width: '100%', maxWidth: 1920, maxHeight: '100vh', aspectRatio: '16 / 9', position: 'relative', overflow: 'hidden' }}>
 					<AnimatePresence mode="wait">
 						<motion.div
 							key={current}

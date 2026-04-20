@@ -198,22 +198,22 @@ export default function S22b_JobRoles() {
 									gap: 4,
 								}}>
 									<span style={{
-										padding: '2px 6px',
+										padding: '2px 7px',
 										background: colors.dark,
 										color: colors.white,
 										fontFamily: fonts.mono,
-										fontSize: 9,
+										fontSize: 11,
 										fontWeight: 700,
 										letterSpacing: 0.3,
 									}}>
 										{j.bornYear}
 									</span>
 									<span style={{
-										padding: '2px 7px',
+										padding: '2px 8px',
 										background: gc.bg,
 										color: gc.color,
 										fontFamily: fonts.mono,
-										fontSize: 9,
+										fontSize: 11,
 										fontWeight: 900,
 										letterSpacing: 0.3,
 										border: `1.5px solid ${colors.black}`,
@@ -241,7 +241,7 @@ export default function S22b_JobRoles() {
 								{/* 英文大名 */}
 								<div style={{
 									fontFamily: fonts.heading,
-									fontSize: 'clamp(15px, 1.6vw, 19px)',
+									fontSize: 'clamp(16px, 1.75vw, 21px)',
 									fontWeight: 900,
 									color: colors.black,
 									lineHeight: 1.15,
@@ -253,7 +253,7 @@ export default function S22b_JobRoles() {
 								{/* 中文小名 */}
 								<div style={{
 									fontFamily: fonts.heading,
-									fontSize: 'clamp(11px, 1.1vw, 13px)',
+									fontSize: 'clamp(12px, 1.2vw, 15px)',
 									fontWeight: 700,
 									color: '#555',
 									marginTop: -4,
@@ -263,11 +263,11 @@ export default function S22b_JobRoles() {
 
 								{/* 薪资 */}
 								<div style={{
-									padding: '6px 10px',
+									padding: '6px 12px',
 									background: colors.yellow,
 									border: `2px solid ${colors.black}`,
 									fontFamily: fonts.mono,
-									fontSize: 'clamp(13px, 1.45vw, 17px)',
+									fontSize: 'clamp(15px, 1.65vw, 19px)',
 									fontWeight: 900,
 									color: colors.black,
 									letterSpacing: -0.3,
@@ -280,11 +280,11 @@ export default function S22b_JobRoles() {
 								<div style={{ display: 'flex', flexWrap: 'wrap', gap: 4 }}>
 									{j.skills.map((s) => (
 										<span key={s} style={{
-											padding: '2px 7px',
+											padding: '2px 8px',
 											background: '#f4f4f4',
 											border: `1.5px solid #bbb`,
 											fontFamily: fonts.mono,
-											fontSize: 10,
+											fontSize: 12,
 											fontWeight: 700,
 											color: '#333',
 										}}>
@@ -299,7 +299,7 @@ export default function S22b_JobRoles() {
 									paddingTop: 6,
 									borderTop: '1.5px dashed #ddd',
 									fontFamily: fonts.mono,
-									fontSize: 10,
+									fontSize: 12,
 									color: '#555',
 									fontWeight: 700,
 									lineHeight: 1.4,
@@ -332,11 +332,11 @@ export default function S22b_JobRoles() {
 						marginBottom: 10,
 					}}>
 						<div style={{
-							padding: '3px 10px',
+							padding: '4px 12px',
 							background: colors.black,
 							color: colors.yellow,
 							fontFamily: fonts.mono,
-							fontSize: 10,
+							fontSize: 13,
 							fontWeight: 800,
 							letterSpacing: 0.8,
 						}}>
@@ -344,7 +344,7 @@ export default function S22b_JobRoles() {
 						</div>
 						<div style={{
 							fontFamily: fonts.heading,
-							fontSize: 'clamp(13px, 1.35vw, 16px)',
+							fontSize: 'clamp(16px, 1.65vw, 20px)',
 							fontWeight: 900,
 							color: colors.black,
 							letterSpacing: -0.3,
@@ -355,7 +355,7 @@ export default function S22b_JobRoles() {
 
 					<div style={{
 						display: 'grid',
-						gridTemplateColumns: '110px repeat(3, 1fr)',
+						gridTemplateColumns: '120px repeat(3, 1fr)',
 						gap: 0,
 						border: `1.5px solid ${colors.black}`,
 					}}>
@@ -363,9 +363,9 @@ export default function S22b_JobRoles() {
 						<div style={{
 							background: colors.black,
 							color: colors.white,
-							padding: '6px 10px',
+							padding: '7px 12px',
 							fontFamily: fonts.mono,
-							fontSize: 10,
+							fontSize: 12,
 							fontWeight: 800,
 							letterSpacing: 0.5,
 						}}>
@@ -375,9 +375,9 @@ export default function S22b_JobRoles() {
 							<div key={h} style={{
 								background: colors.black,
 								color: colors.yellow,
-								padding: '6px 10px',
+								padding: '7px 12px',
 								fontFamily: fonts.mono,
-								fontSize: 10,
+								fontSize: 12,
 								fontWeight: 800,
 								letterSpacing: 0.5,
 								borderLeft: `1.5px solid ${colors.yellow}`,
@@ -391,9 +391,9 @@ export default function S22b_JobRoles() {
 							<div key={row.label} style={{ display: 'contents' }}>
 								<div style={{
 									background: idx % 2 === 0 ? '#fafafa' : colors.white,
-									padding: '7px 10px',
+									padding: '8px 12px',
 									fontFamily: fonts.mono,
-									fontSize: 11,
+									fontSize: 12,
 									fontWeight: 800,
 									color: colors.black,
 									borderTop: idx === 0 ? 'none' : '1px solid #e4e4e4',
@@ -406,12 +406,12 @@ export default function S22b_JobRoles() {
 										key={ci}
 										style={{
 											background: idx % 2 === 0 ? '#fafafa' : colors.white,
-											padding: '7px 10px',
+											padding: '8px 12px',
 											fontFamily: fonts.body,
-											fontSize: 11,
+											fontSize: 12.5,
 											fontWeight: 600,
 											color: '#222',
-											lineHeight: 1.35,
+											lineHeight: 1.38,
 											borderTop: idx === 0 ? 'none' : '1px solid #e4e4e4',
 											borderLeft: '1px solid #e4e4e4',
 										}}
@@ -426,7 +426,7 @@ export default function S22b_JobRoles() {
 					<div style={{
 						marginTop: 8,
 						fontFamily: fonts.mono,
-						fontSize: 10.5,
+						fontSize: 12,
 						color: '#555',
 						fontWeight: 700,
 						letterSpacing: 0.2,

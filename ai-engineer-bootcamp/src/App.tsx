@@ -6,6 +6,7 @@ import S04 from './components/slides/S04_PainWarm';
 import S04b from './components/slides/S04b_Misconceptions';
 import S05 from './components/slides/S05_MarketData';
 import S05b from './components/slides/S05b_SdeOnlyPath';
+import S05b3 from './components/slides/S05b3_DevOpsAmplified';
 import S05b2 from './components/slides/S05b2_EngineeringConvergence';
 import S05c from './components/slides/S05c_AiCodingCore';
 import S05d from './components/slides/S05d_FiveDimensions';
@@ -48,6 +49,7 @@ export default function App() {
 			<S04b />
 			<S05 />
 			<S05b />
+			<S05b3 />
 			<S05b2 />
 			<S05c />
 			<S05d />

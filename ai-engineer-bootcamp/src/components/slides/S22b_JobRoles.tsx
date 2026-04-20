@@ -332,11 +332,11 @@ export default function S22b_JobRoles() {
 						marginBottom: 10,
 					}}>
 						<div style={{
-							padding: '4px 12px',
+							padding: '3px 10px',
 							background: colors.black,
 							color: colors.yellow,
 							fontFamily: fonts.mono,
-							fontSize: 13,
+							fontSize: 11,
 							fontWeight: 800,
 							letterSpacing: 0.8,
 						}}>
@@ -344,7 +344,7 @@ export default function S22b_JobRoles() {
 						</div>
 						<div style={{
 							fontFamily: fonts.heading,
-							fontSize: 'clamp(16px, 1.65vw, 20px)',
+							fontSize: 'clamp(14px, 1.45vw, 17px)',
 							fontWeight: 900,
 							color: colors.black,
 							letterSpacing: -0.3,

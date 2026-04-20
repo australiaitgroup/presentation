@@ -106,13 +106,13 @@ export default function S22b_JobRoles() {
 				opacity: 0.05,
 			}} />
 
-			<div style={{ position: 'relative', zIndex: 1, width: '94%', maxWidth: 1420, padding: '22px 32px' }}>
+			<div style={{ position: 'relative', zIndex: 1, width: '94%', maxWidth: 1420, padding: '14px 32px' }}>
 				{/* 顶部标题 */}
 				<motion.div
 					initial={{ opacity: 0, y: -12 }}
 					animate={{ opacity: 1, y: 0 }}
 					transition={{ duration: 0.4 }}
-					style={{ marginBottom: 14 }}
+					style={{ marginBottom: 10 }}
 				>
 					<div style={{ display: 'flex', alignItems: 'baseline', gap: 10, flexWrap: 'wrap', marginBottom: 8 }}>
 						<div style={{
@@ -163,11 +163,11 @@ export default function S22b_JobRoles() {
 					</h2>
 				</motion.div>
 
-				{/* 6 张岗位卡片 3x2 */}
+				{/* 3 张岗位卡片 */}
 				<div style={{
 					display: 'grid',
 					gridTemplateColumns: 'repeat(3, 1fr)',
-					gap: 12,
+					gap: 10,
 				}}>
 					{jobs.map((j, i) => {
 						const gc = growthConfig[j.growth];
@@ -181,10 +181,10 @@ export default function S22b_JobRoles() {
 									background: colors.white,
 									border,
 									boxShadow: shadow,
-									padding: '12px 14px 10px',
+									padding: '10px 12px 8px',
 									display: 'flex',
 									flexDirection: 'column',
-									gap: 8,
+									gap: 6,
 									position: 'relative',
 									minHeight: 0,
 								}}
@@ -318,18 +318,18 @@ export default function S22b_JobRoles() {
 					animate={{ opacity: 1, y: 0 }}
 					transition={{ duration: 0.4, delay: 0.7 }}
 					style={{
-						marginTop: 14,
+						marginTop: 10,
 						background: colors.white,
 						border,
 						boxShadow: shadow,
-						padding: '12px 14px',
+						padding: '10px 12px',
 					}}
 				>
 					<div style={{
 						display: 'flex',
 						alignItems: 'center',
 						gap: 10,
-						marginBottom: 10,
+						marginBottom: 7,
 					}}>
 						<div style={{
 							padding: '3px 10px',
@@ -441,8 +441,8 @@ export default function S22b_JobRoles() {
 					animate={{ opacity: 1, y: 0 }}
 					transition={{ duration: 0.4, delay: 0.9 }}
 					style={{
-						marginTop: 10,
-						padding: '10px 18px',
+						marginTop: 8,
+						padding: '8px 18px',
 						background: colors.dark,
 						color: colors.white,
 						border,

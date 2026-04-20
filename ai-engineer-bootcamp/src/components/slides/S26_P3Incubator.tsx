@@ -91,6 +91,27 @@ export default function S26_P3Incubator() {
 					}}>
 						真企业客户 · 真流量 · 真 SLO · Mentor 全程护航
 					</p>
+					<div style={{
+						display: 'inline-flex', alignItems: 'center', gap: 8,
+						marginTop: 8, padding: '4px 12px',
+						background: colors.yellow, color: colors.black,
+						border: `2px solid ${colors.black}`,
+						boxShadow: `3px 3px 0 ${colors.red}`,
+						transform: 'rotate(-0.5deg)',
+					}}>
+						<span style={{
+							fontFamily: fonts.mono, fontSize: 10, fontWeight: 900,
+							letterSpacing: 1, color: colors.red,
+						}}>
+							★ UPSIDE
+						</span>
+						<span style={{
+							fontFamily: fonts.heading, fontSize: 'clamp(12px,1.15vw,15px)',
+							fontWeight: 900, letterSpacing: -0.2,
+						}}>
+							甚至有可能 · 真实甲方用户在线付费使用
+						</span>
+					</div>
 				</motion.div>
 
 				{/* 三大支柱 */}

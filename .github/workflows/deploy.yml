@@ -44,15 +44,24 @@ jobs:
           bun install
           bun run build
 
+      # Build fundraising-bp (unlisted on landing page — share URL directly)
+      - name: Build fundraising-bp
+        working-directory: fundraising-bp
+        run: |
+          bun install
+          bun run build
+
       # Assemble all presentations into one output
       - name: Assemble output
         run: |
           mkdir -p _site/company-intro
           mkdir -p _site/ai-adoption-bootcamp
           mkdir -p _site/b2b-pitch
+          mkdir -p _site/fundraising-bp
           cp -r company-intro/dist/* _site/company-intro/
           cp -r ai-adoption-bootcamp/dist/* _site/ai-adoption-bootcamp/
           cp -r b2b-pitch/dist/* _site/b2b-pitch/
+          cp -r fundraising-bp/dist/* _site/fundraising-bp/
           # Copy curriculum.html as static page
           cp ai-adoption-bootcamp/public/curriculum.html _site/ai-adoption-bootcamp/curriculum.html
           # Add index page listing all presentations

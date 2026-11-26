@@ -7,7 +7,7 @@ export default function S16() {
 				<div>
 					<img src={asset('brand/tagline-xueai-laijiangren.png')} alt="学 AI 来匠人" style={{ height: 88, display: 'block', marginLeft: -6 }} />
 					<h1 style={{ fontFamily: f.h, fontWeight: 700, fontSize: 56, lineHeight: 1.25, marginTop: 22 }}>先免费学起来，<br />需要时再找老师带</h1>
-					<Card style={{ marginTop: 32, background: c('wash-coral') }}>
+					<Card style={{ marginTop: 32, background: c('wash-sunshine') }}>
 						<div style={{ display: 'flex', gap: 14, alignItems: 'center' }}><span style={{ fontFamily: f.h, fontWeight: 700, fontSize: 28 }}>匠人会员</span><Pill style={{ background: c('canvas-pure') }}>A$19.90 / 月起</Pill></div>
 						<p style={{ fontSize: 19, lineHeight: 1.75, marginTop: 10 }}>课程最高 8 折 · 付费活动免费参加 · 1v1 导师最低 85 折<br />会员不含训练营课程本身；具体权益与价格见 jracademy.ai/membership</p>
 					</Card>

@@ -13,7 +13,7 @@ export default function S07() {
 					</div>
 					<div style={{ display: 'flex', flexDirection: 'column', gap: 16, minHeight: 0 }}>
 						<img src={asset('images/partnership-4.jpg')} alt="匠人学院课堂现场" style={{ width: '100%', flex: 1, minHeight: 0, objectFit: 'cover', borderRadius: c('r-tile') }} />
-						<Card style={{ background: c('wash-coral') }}><Pill style={{ background: c('canvas-pure') }}>课表持续更新</Pill><p style={{ fontSize: 20, fontWeight: 700, marginTop: 12 }}>开班时间见<br />jracademy.ai/bootcamp</p></Card>
+						<Card style={{ background: c('wash-sunshine') }}><Pill style={{ background: c('canvas-pure') }}>课表持续更新</Pill><p style={{ fontSize: 20, fontWeight: 700, marginTop: 12 }}>开班时间见<br />jracademy.ai/bootcamp</p></Card>
 					</div>
 				</div>
 			</div>

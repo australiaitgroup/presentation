@@ -4,7 +4,7 @@
 
 - 内容依据：jracademy.ai 官网。产品说明见主仓库 `docs/prd/JR_ACADEMY_COMPANY_PRESENTATION_PRD.md`。
 - 翻页引擎：取自 Curriculum 的 Talk Deck 模板（`SlideEngine`、`CameraBubble`、`ui`、`theme`、`presentation.css`，未改动）。
-- 视觉：JR Craft。`src/styles/jr-craft.css` 与字体是 `jr-academy-brand` 的原样副本，改 token 请改原仓库再复制过来。
+- 视觉：JR Craft。本稿字体用 DM Sans + Noto Sans SC，文字不用红色，重点用黄色荧光底（owner 2026-11-26 反馈）。
 
 ## 更新时要对照官网的内容
 

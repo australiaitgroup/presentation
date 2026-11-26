@@ -19,7 +19,7 @@ export function Page({ children, bg = c('canvas'), dots, night, style }: { child
 export function Head({ eyebrow, title, lead, tone = 'coral', night, width = 1250 }: { eyebrow: string; title: ReactNode; lead?: ReactNode; tone?: Tone; night?: boolean; width?: number }) {
 	return (
 		<header style={{ maxWidth: width }}>
-			<div style={{ fontSize: 18, fontWeight: 700, color: night ? c(tone) : c(`${tone}-deep`), marginBottom: 10 }}>{eyebrow}</div>
+			<div style={{ fontSize: 18, fontWeight: 700, color: night ? c(tone) : c('slate'), marginBottom: 10 }}>{eyebrow}</div>
 			<h1 style={{ fontFamily: f.h, fontSize: 52, lineHeight: 1.18, fontWeight: 700 }}>{title}</h1>
 			{lead && <p style={{ fontSize: 22, lineHeight: 1.7, marginTop: 12, color: night ? c('on-night-muted') : c('slate') }}>{lead}</p>}
 		</header>

@@ -9,7 +9,7 @@ export default function S01() {
 					<h1 style={{ fontFamily: f.h, fontWeight: 700, fontSize: 64, lineHeight: 1.2, marginTop: 28 }}>匠人学院<br />AI 课程、IT 培训<br />与职业发展</h1>
 					<p style={{ fontSize: 24, lineHeight: 1.7, color: c('slate'), marginTop: 24 }}>JR Academy · 2017 年成立于澳大利亚</p>
 					<div style={{ display: 'flex', gap: 14, marginTop: 34 }}>
-						<Pill tone="coral" style={{ fontSize: 22, padding: '10px 24px' }}>9 年，帮 6028+ 人拿到 Offer</Pill>
+						<Pill tone="sunshine" style={{ fontSize: 22, padding: '10px 24px' }}>9 年，帮 6028+ 人拿到 Offer</Pill>
 						<Pill style={{ fontSize: 22, padding: '10px 24px' }}>jracademy.ai</Pill>
 					</div>
 				</div>

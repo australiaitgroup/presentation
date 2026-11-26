@@ -20,3 +20,11 @@
 @media (max-width: 700px) and (orientation: portrait) {
 	.deck-runtime > button, .deck-runtime > div:has(> button) { display: none !important; }
 }
+
+/* 本稿字体（owner 2026-11-26：原标题字体不好看）：中文 Noto Sans SC，英文和数字 DM Sans，标题与正文一套。 */
+:root {
+	--jc-font-heading: "JR Craft Body", "Noto Sans SC Variable", "PingFang SC", sans-serif;
+	--jc-font-body: "JR Craft Body", "Noto Sans SC Variable", "PingFang SC", sans-serif;
+}
+/* 重点词用黄色荧光底，不用红字。 */
+.marker { background: linear-gradient(transparent 60%, var(--jc-sunshine) 60%, var(--jc-sunshine) 92%, transparent 92%); padding: 0 6px; }

@@ -24,8 +24,8 @@ export default function S02() {
 	return (
 		<Page dots>
 			<div style={{ ...body, gap: 0, paddingBottom: 0 }}>
-				<h1 style={{ fontFamily: f.h, fontWeight: 700, fontSize: 66, lineHeight: 1.2 }}>9 年，帮 <span style={{ color: c('coral-deep') }}>6028+ 人</span>拿到 Offer</h1>
-				<p style={{ fontSize: 22, color: c('slate'), marginTop: 10 }}>下面每张都是学员拿到的 Offer。全部记录见 <a href="https://jracademy.ai/offer-board" target="_blank" rel="noreferrer" style={{ color: c('coral-deep'), fontWeight: 700 }}>jracademy.ai/offer-board</a></p>
+				<h1 style={{ fontFamily: f.h, fontWeight: 700, fontSize: 66, lineHeight: 1.2 }}>9 年，帮 <span className="marker">6028+ 人</span>拿到 Offer</h1>
+				<p style={{ fontSize: 22, color: c('slate'), marginTop: 10 }}>下面每张都是学员拿到的 Offer。全部记录见 <a href="https://jracademy.ai/offer-board" target="_blank" rel="noreferrer" style={{ color: c('ink'), fontWeight: 700, textDecoration: 'underline', textUnderlineOffset: 5 }}>jracademy.ai/offer-board</a></p>
 			</div>
 			<div className="offer-wall" style={{ position: 'absolute', left: -80, right: -80, top: 270, transform: 'rotate(-2.4deg)', display: 'flex', flexDirection: 'column', gap: 24, maskImage: 'linear-gradient(90deg, transparent, #000 9%, #000 91%, transparent)' }}>
 				{rows.map((row, r) => (

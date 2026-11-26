@@ -10,16 +10,20 @@
 
 | 页 | 内容 | 来源 |
 |---|---|---|
-| 2 | Offer 墙（`src/data/offers.ts`、`public/offers/`，2026-11-26 抓取 113 条） | 首页 |
-| 3、4 | 6028+、600+、6万+；覆盖国家 | 关于页；办公室地址取自页脚 |
-| 5 | 学员雇主 500+（owner 2026-11-26 定；首页可见 Logo 墙写 180 家）、105 家导师来源（首页）；100+ 合作企业（/business、关于页正文。关于页滚动数字另写 500，未采用） | 首页、/business |
-| 6 | 雇主 Logo 滚动墙，标题 500+（`src/data/employers.ts`、`public/employers/`，179 个，官网另有 1 家名称未知） | 首页 |
-| 7 | 合作伙伴五家。OpenAI、Claude、AWS 用官网徽章；Google、Microsoft 按 owner 2026-11-26 确认，暂用公司 Logo，拿到官方徽章后替换 | 首页、owner |
-| 10、14、17、18 | 学习方向、热门认证、导师、学员反馈 | 首页 |
-| 11 | 互动 Lab 名称 | 页脚 |
-| 12 | 课程与时长 | /bootcamp、首页 |
-| 20 | 企业服务 | /business |
-| 21 | 会员价格 A$19.90/月起、权益、联系方式 | /membership、页脚 |
+| 1 | 3D 封面：口号字标、地球、环绕的真实 Offer 卡片 | 品牌字标、首页 Offer |
+| 2 | 我们是谁：2017 年成立与关键数字 | 关于页、首页 |
+| 3 | 中国驻布里斯班、墨尔本总领事馆支持（横幅在 `public/consulate/`） | jr-omni 新生节素材中的「支持单位」；不写「大使馆」「合办」 |
+| 4 | Offer 墙（`src/data/offers.ts`、`public/offers/`，2026-11-26 抓取 113 条） | 首页 |
+| 5 | 走向国际：世界地图（`src/data/worldmap.ts`）与七城现场照片（`public/cities/`，页面不提 AI圈） | 关于页覆盖国家；照片取自 apps/ai-circle-funding/public/gallery |
+| 6、7 | 学员去向 500+（owner 定；首页 Logo 墙写 180 家）、100+ 合作企业、105 家导师来源 | owner、首页、/business |
+| 8 | 五家合作伙伴；Google、Microsoft 暂用公司 Logo，拿到官方徽章后替换 | 首页、owner |
+| 11、15、18、19 | 学习方向、热门认证、导师、学员反馈 | 首页 |
+| 12 | 互动 Lab 名称 | 页脚 |
+| 13 | 课程与时长 | /bootcamp、首页 |
+| 21 | 企业服务 | /business |
+| 22 | 会员价格 A$19.90/月起、权益、联系方式 | /membership、页脚 |
+
+3D：地球是 `src/components/Globe.tsx`（canvas，陆地点阵在 `src/data/land.ts`），其余为 `src/styles/depth.css` 的 CSS 3D。开启「减少动态效果」时停在静态画面。
 
 ## 本地运行
 

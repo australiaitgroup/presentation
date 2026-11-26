@@ -8,7 +8,7 @@ const partners = [
 	['Microsoft', 'brand/microsoft.webp', 'Microsoft Partner', 90],
 ] as const;
 
-export default function S07() {
+export default function S08() {
 	return (
 		<Page dots>
 			<div style={{ ...body, justifyContent: 'center', gap: 56 }}>

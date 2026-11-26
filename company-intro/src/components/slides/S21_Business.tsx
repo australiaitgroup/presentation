@@ -2,7 +2,7 @@ import { Page, Head, Card, Pill, body, c, f, grid } from '../kit';
 
 const services = [['技术开发与外包', '网站与系统开发、AI 应用搭建、项目外包、MVP 快速开发'], ['AI 战略咨询', 'AI 战略、技术架构设计、CTO 即服务、代码与安全审计'], ['人才推荐', '人才推荐、实习安排、猎头服务、简历库访问'], ['企业培训与教育合作', '企业内训，以及高中、大学的课程与师资合作']];
 
-export default function S20() {
+export default function S21() {
 	return (
 		<Page>
 			<div style={{ ...body, justifyContent: 'center', gap: 36 }}>

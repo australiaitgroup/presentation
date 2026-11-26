@@ -7,7 +7,7 @@ const quotes: [Tone, string, string][] = [
 	['mint', '老师讲解 container 的部分时的比喻非常形象让人很好理解', 'DevOps 项目实战班第 13 期'],
 ];
 
-export default function S18() {
+export default function S19() {
 	return (
 		<Page bg={c('surface')}>
 			<div style={{ ...body, justifyContent: 'center', gap: 48 }}>

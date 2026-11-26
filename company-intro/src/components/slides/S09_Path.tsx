@@ -8,14 +8,14 @@ const steps: [Tone, string, string, string[]][] = [
 	['sunshine', '社区活动', '去哪认识同路的人？', ['讲座与公开课', 'Workshop', '职业社区']],
 ];
 
-export default function S08() {
+export default function S09() {
 	return (
 		<Page dots>
 			<div style={{ ...body, justifyContent: 'center', gap: 56 }}>
 				<Head eyebrow="匠人能帮你什么" title="从看清自己到拿到工作，每一步都有地方可去" lead="想换工作，先拿真实招聘对照，看清还差什么，再按学、做项目、整理作品、投简历的顺序走。" />
 				<div style={grid(5, 18)}>
 					{steps.map(([tone, name, q, items]) => (
-						<div key={name} style={{ background: c(`grad-${tone}`), boxShadow: c(`shadow-${tone}`), color: tone === 'sunshine' ? c('ink') : c('on-gradient'), borderRadius: c('r-feature'), padding: '30px 24px', minHeight: 400, display: 'flex', flexDirection: 'column' }}>
+						<div key={name} className="flip" style={{ background: c(`grad-${tone}`), boxShadow: c(`shadow-${tone}`), color: tone === 'sunshine' ? c('ink') : c('on-gradient'), borderRadius: c('r-feature'), padding: '30px 24px', minHeight: 400, display: 'flex', flexDirection: 'column' }}>
 							<h2 style={{ fontFamily: f.h, fontWeight: 700, fontSize: 34 }}>{name}</h2>
 							<p style={{ fontSize: 20, fontWeight: 700, lineHeight: 1.55, marginTop: 14, minHeight: 66 }}>{q}</p>
 							<ul style={{ listStyle: 'none', marginTop: 'auto', display: 'grid', gap: 12 }}>

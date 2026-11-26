@@ -6,7 +6,7 @@ const rows = Array.from({ length: ROWS }, (_, r) => employers.filter((_, i) => i
 // 每排滚完一轮的秒数不同，速度错开；相邻两排方向相反
 const seconds = [48, 78, 58, 92, 52, 84, 66, 100, 55, 88, 62, 96];
 
-export default function S06() {
+export default function S07() {
 	return (
 		<Page dots>
 			<div style={{ padding: '38px 96px 0' }}>

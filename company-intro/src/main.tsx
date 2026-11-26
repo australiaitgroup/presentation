@@ -6,6 +6,7 @@ import '@fontsource-variable/noto-sans-sc';
 import './styles/jr-craft.css';
 import './styles/presentation.css';
 import './styles/deck.css';
+import './styles/depth.css';
 
 // 旧版链接用 #页码（例如 …/company-intro/#1），引擎用 ?page=N；这里保持旧链接可用。
 const legacy = window.location.hash.match(/^#(\d+)$/);

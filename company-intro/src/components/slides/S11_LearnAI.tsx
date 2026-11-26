@@ -5,7 +5,7 @@ const groups: [Tone, string, string, [string, string, string][]][] = [
 	['sky', '写代码的人', '从用 AI 写代码，到自己做 AI 应用', [['Vibe Coding', '用自然语言写代码', '入门 · 4-8 周'], ['AI Engineer', '从使用 AI 到构建 AI 应用', '深入 · 8-12 周'], ['Context Engineering', '下一代 LLM 工程', '进阶 · 3-4 周'], ['AI Builder', '快速构建 AI 产品原型', '进阶 · 4-6 周']]],
 ];
 
-export default function S10() {
+export default function S11() {
 	return (
 		<Page dots>
 			<div style={body}>

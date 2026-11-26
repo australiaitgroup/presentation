@@ -1,25 +1,26 @@
 import SlideEngine from './components/SlideEngine';
 import S01 from './components/slides/S01_Cover';
-import S02 from './components/slides/S02_OfferWall';
-import S03 from './components/slides/S03_About';
-import S04 from './components/slides/S04_Global';
-import S05 from './components/slides/S05_Companies';
-import S06 from './components/slides/S06_Employers';
-import S07 from './components/slides/S07_Partners';
-import S08 from './components/slides/S08_Path';
-import S09 from './components/slides/S09_Assessment';
-import S10 from './components/slides/S10_LearnAI';
-import S11 from './components/slides/S11_Labs';
-import S12 from './components/slides/S12_Bootcamp';
-import S13 from './components/slides/S13_P3';
-import S14 from './components/slides/S14_CertMaster';
-import S15 from './components/slides/S15_Connect';
-import S16 from './components/slides/S16_CareerOS';
-import S17 from './components/slides/S17_Mentors';
-import S18 from './components/slides/S18_Voices';
-import S19 from './components/slides/S19_Community';
-import S20 from './components/slides/S20_Business';
-import S21 from './components/slides/S21_Contact';
+import S02 from './components/slides/S02_WhoWeAre';
+import S03 from './components/slides/S03_Consulate';
+import S04 from './components/slides/S04_OfferWall';
+import S05 from './components/slides/S05_Reach';
+import S06 from './components/slides/S06_Companies';
+import S07 from './components/slides/S07_Employers';
+import S08 from './components/slides/S08_Partners';
+import S09 from './components/slides/S09_Path';
+import S10 from './components/slides/S10_Assessment';
+import S11 from './components/slides/S11_LearnAI';
+import S12 from './components/slides/S12_Labs';
+import S13 from './components/slides/S13_Bootcamp';
+import S14 from './components/slides/S14_P3';
+import S15 from './components/slides/S15_CertMaster';
+import S16 from './components/slides/S16_Connect';
+import S17 from './components/slides/S17_CareerOS';
+import S18 from './components/slides/S18_Mentors';
+import S19 from './components/slides/S19_Voices';
+import S20 from './components/slides/S20_Community';
+import S21 from './components/slides/S21_Business';
+import S22 from './components/slides/S22_Contact';
 
 export default function App() {
 	return (
@@ -45,6 +46,7 @@ export default function App() {
 			<S19 />
 			<S20 />
 			<S21 />
+			<S22 />
 		</SlideEngine>
 	);
 }

@@ -6,7 +6,7 @@ const stats: [Tone, string, string, string][] = [
 	['mint', '105', '家公司', '匠人的老师来自这些公司'],
 ];
 
-export default function S05() {
+export default function S06() {
 	return (
 		<Page dots>
 			<div style={{ ...body, justifyContent: 'center', gap: 56 }}>

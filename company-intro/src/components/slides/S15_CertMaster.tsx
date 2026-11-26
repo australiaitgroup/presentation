@@ -3,7 +3,7 @@ import { Page, Head, Card, Pill, body, c, f, grid } from '../kit';
 const certs = [['基础级', 'AWS Cloud Practitioner', 'CLF-C02'], ['基础级', 'Azure Fundamentals', 'AZ-900'], ['助理级', 'AWS Solutions Architect', 'SAA-C03'], ['助理级', 'AWS Developer', 'DVA-C02'], ['助理级', 'Azure Administrator', 'AZ-104'], ['专家级', 'AWS ML Specialty', 'MLS-C01']];
 const features = [['章节讲解', '按官方考纲编排，先学知识点再做题'], ['AI Tutor', '逐个选项讲清楚为什么对、为什么错'], ['模拟考试', '按真实考试的题量和时间限时练'], ['错题本', '收集错题和薄弱知识点，考前集中复盘']];
 
-export default function S14() {
+export default function S15() {
 	return (
 		<Page bg={c('wash-sky')}>
 			<div style={body}>

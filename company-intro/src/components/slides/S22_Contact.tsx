@@ -14,8 +14,8 @@ export default function S22() {
 					<div style={{ fontSize: 23, lineHeight: 2, marginTop: 28 }}><div><b>官网</b>　jracademy.ai</div><div><b>邮箱</b>　hello@jiangren.com.au</div><div><b>电话</b>　0421-672-555</div></div>
 				</div>
 				<Card style={{ textAlign: 'center', padding: 36, borderRadius: c('r-program') }}>
-					<img src={asset('site/wechat-qr.jpg')} alt="课程顾问匠人小花2的微信二维码" style={{ width: '100%', display: 'block' }} />
-					<div style={{ fontFamily: f.h, fontWeight: 700, fontSize: 28, marginTop: 14 }}>微信扫码，找课程顾问</div>
+					<img src={asset('site/wechat-qr.jpg')} alt="课程顾问小花 Amelia 的微信二维码" style={{ width: '100%', display: 'block' }} />
+					<div style={{ fontFamily: f.h, fontWeight: 700, fontSize: 28, marginTop: 14 }}>微信扫码，找小花 Amelia</div>
 					<p style={{ fontSize: 18, lineHeight: 1.65, color: c('slate'), marginTop: 8 }}>聊聊哪门课合适、什么时候开班、<br />每周大概要花多少时间</p>
 				</Card>
 			</div>

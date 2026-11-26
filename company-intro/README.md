@@ -24,7 +24,7 @@
 | 12 | 互动 Lab 名称 | 页脚 |
 | 13 | 课程与时长 | /bootcamp、首页 |
 | 21 | 企业服务 | /business |
-| 22 | 会员价格 A$19.90/月起、权益、联系方式 | /membership、页脚 |
+| 22 | 会员价格 A$19.90/月起、权益、联系方式；微信二维码是本次客服「小花 Amelia」（owner 2026-11-26 提供，非官网现挂的小花2） | /membership、页脚、owner |
 
 3D：地球是 `src/components/Globe.tsx`（canvas，陆地点阵在 `src/data/land.ts`），其余为 `src/styles/depth.css` 的 CSS 3D。开启「减少动态效果」时停在静态画面。
 

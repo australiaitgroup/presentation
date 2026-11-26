@@ -28,3 +28,6 @@
 }
 /* 重点词用黄色荧光底，不用红字。 */
 .marker { background: linear-gradient(transparent 60%, var(--jc-sunshine) 60%, var(--jc-sunshine) 92%, transparent 92%); padding: 0 6px; }
+
+/* 雇主墙每排 15 个 Logo，间距比 Offer 卡片小。 */
+.offer-wall.dense .offer-row > div { gap: 8px; padding-right: 8px; }

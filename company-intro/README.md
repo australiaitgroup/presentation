@@ -17,6 +17,7 @@
 | 5 | 走向国际：世界地图（`src/data/worldmap.ts`）与七城现场照片（`public/cities/`，页面不提 AI圈） | 关于页覆盖国家；照片取自 apps/ai-circle-funding/public/gallery |
 | 6、7 | 学员去向 500+（owner 定；首页 Logo 墙写 180 家）、100+ 合作企业、105 家导师来源 | owner、首页、/business |
 | 8 | 五家合作伙伴；Google、Microsoft 暂用公司 Logo，拿到官方徽章后替换 | 首页、owner |
+| 9、17 | CareerOS 六步工作流与 AI 导师 | /careeros |
 | 11、15、18、19 | 学习方向、热门认证、导师、学员反馈 | 首页 |
 | 12 | 互动 Lab 名称 | 页脚 |
 | 13 | 课程与时长 | /bootcamp、首页 |

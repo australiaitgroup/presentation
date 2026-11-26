@@ -1,16 +1,20 @@
 import { Page, Head, asset, body, c, f } from '../kit';
 
-const steps = [['评估', 'Assess', '差距清单'], ['规划', 'Plan', '每周计划'], ['行动', 'Act', '这周的事'], ['证明', 'Prove', '作品版本'], ['连接', 'Connect', '投递材料'], ['成长', 'Grow', '面试反馈']];
+const points = [
+	['AI 导师带着做', '右侧 AI 导师告诉你这一步做什么、怎么检查'],
+	['真项目里动手', '中间工作区连接你自己的 Claude Code 或 Codex'],
+	['判断有依据', '材料在本机读取，AI 的每条提议附原文，你确认才保存'],
+];
 
 export default function S17() {
 	return (
 		<Page night>
 			<div style={{ ...body, display: 'grid', gridTemplateColumns: '520px 1fr', gap: 48 }}>
 				<div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
-					<Head night tone="sunshine" eyebrow="CareerOS" title="看清能力，决定下一步" lead="评估、规划、行动在网站上做；在真实项目里做任务、证明、连接、成长在 CareerOS 桌面版里完成。" />
-					<ol style={{ listStyle: 'none', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 12, marginTop: 34 }}>
-						{steps.map(([zh, en, out], i) => <li key={en} className="rise" style={{ background: c('night-2'), border: `1px solid ${c(i < 3 ? 'night-line' : 'sunshine')}`, borderRadius: 20, padding: '15px 20px' }}><div style={{ fontFamily: f.h, fontWeight: 700, fontSize: 26 }}>{i + 1}. {zh} <span style={{ fontSize: 15, color: c('on-night-muted') }}>{en}</span></div><div style={{ fontSize: 17, color: c('on-night-muted'), marginTop: 4 }}>留下{out}</div></li>)}
-					</ol>
+					<Head night tone="sunshine" eyebrow="CareerOS 桌面版 · 匠人自主研发" title={<>AI 带着你，<br />在真实项目里做</>} lead="不是看完一堆课就结束。你亲手做任务，AI 导师在旁边带。" />
+					<ul style={{ listStyle: 'none', display: 'grid', gap: 14, marginTop: 34 }}>
+						{points.map(([t, d]) => <li key={t} className="rise" style={{ background: c('night-2'), border: `1px solid ${c('night-line')}`, borderRadius: 20, padding: '18px 24px' }}><div style={{ fontFamily: f.h, fontWeight: 700, fontSize: 25 }}>{t}</div><div style={{ fontSize: 17, lineHeight: 1.6, color: c('on-night-muted'), marginTop: 4 }}>{d}</div></li>)}
+					</ul>
 				</div>
 				<div style={{ alignSelf: 'center' }}>
 					<img className="shot" src={asset('site/careeros-act.webp')} alt="CareerOS 桌面版行动阶段界面：左侧职业档案，中间做项目任务，右侧 AI 导师提示下一步" style={{ width: '100%', display: 'block', borderRadius: c('r-tile'), border: `1px solid ${c('night-line')}` }} />

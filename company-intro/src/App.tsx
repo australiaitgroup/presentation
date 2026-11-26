@@ -7,7 +7,7 @@ import S05 from './components/slides/S05_Reach';
 import S06 from './components/slides/S06_Companies';
 import S07 from './components/slides/S07_Employers';
 import S08 from './components/slides/S08_Partners';
-import S09 from './components/slides/S09_Path';
+import S09 from './components/slides/S09_Workflow';
 import S10 from './components/slides/S10_Assessment';
 import S11 from './components/slides/S11_LearnAI';
 import S12 from './components/slides/S12_Labs';

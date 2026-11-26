@@ -2,19 +2,24 @@ import SlideEngine from './components/SlideEngine';
 import S01 from './components/slides/S01_Cover';
 import S02 from './components/slides/S02_OfferWall';
 import S03 from './components/slides/S03_About';
-import S04 from './components/slides/S04_Path';
-import S05 from './components/slides/S05_Assessment';
-import S06 from './components/slides/S06_LearnAI';
-import S07 from './components/slides/S07_Bootcamp';
-import S08 from './components/slides/S08_P3';
-import S09 from './components/slides/S09_CertMaster';
-import S10 from './components/slides/S10_Connect';
-import S11 from './components/slides/S11_CareerOS';
-import S12 from './components/slides/S12_Mentors';
-import S13 from './components/slides/S13_Voices';
-import S14 from './components/slides/S14_Community';
-import S15 from './components/slides/S15_Business';
-import S16 from './components/slides/S16_Contact';
+import S04 from './components/slides/S04_Global';
+import S05 from './components/slides/S05_Companies';
+import S06 from './components/slides/S06_Employers';
+import S07 from './components/slides/S07_Partners';
+import S08 from './components/slides/S08_Path';
+import S09 from './components/slides/S09_Assessment';
+import S10 from './components/slides/S10_LearnAI';
+import S11 from './components/slides/S11_Labs';
+import S12 from './components/slides/S12_Bootcamp';
+import S13 from './components/slides/S13_P3';
+import S14 from './components/slides/S14_CertMaster';
+import S15 from './components/slides/S15_Connect';
+import S16 from './components/slides/S16_CareerOS';
+import S17 from './components/slides/S17_Mentors';
+import S18 from './components/slides/S18_Voices';
+import S19 from './components/slides/S19_Community';
+import S20 from './components/slides/S20_Business';
+import S21 from './components/slides/S21_Contact';
 
 export default function App() {
 	return (
@@ -35,6 +40,11 @@ export default function App() {
 			<S14 />
 			<S15 />
 			<S16 />
+			<S17 />
+			<S18 />
+			<S19 />
+			<S20 />
+			<S21 />
 		</SlideEngine>
 	);
 }

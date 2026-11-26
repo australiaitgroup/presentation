@@ -1,73 +1,22 @@
-# React + TypeScript + Vite
+# 匠人学院公司介绍
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+在线地址：https://australiaitgroup.github.io/presentation/company-intro/ （旧链接的 `#页码` 仍可用）
 
-Currently, two official plugins are available:
+- 内容依据：jracademy.ai 官网。产品说明见主仓库 `docs/prd/JR_ACADEMY_COMPANY_PRESENTATION_PRD.md`。
+- 翻页引擎：取自 Curriculum 的 Talk Deck 模板（`SlideEngine`、`CameraBubble`、`ui`、`theme`、`presentation.css`，未改动）。
+- 视觉：JR Craft。`src/styles/jr-craft.css` 与字体是 `jr-academy-brand` 的原样副本，改 token 请改原仓库再复制过来。
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 更新时要对照官网的内容
 
-## React Compiler
+| 页 | 内容 | 来源 |
+|---|---|---|
+| 2 | Offer 墙（`src/data/offers.ts`、`public/offers/`，2026-11-26 抓取 113 条） | 首页 |
+| 3 | 6028+、600+、6万+ | 关于页；办公室地址取自页脚 |
+| 6、9、12、13 | 学习方向、热门认证、导师、学员反馈 | 首页 |
+| 7 | 课程与时长 | /bootcamp、首页 |
+| 15 | 企业服务 | /business |
+| 16 | 会员价格 A$19.90/月起、权益、联系方式 | /membership、页脚 |
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 本地运行
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+`bun install && bun run dev`。推送到 main 会通过 GitHub Actions 自动部署到 GitHub Pages。

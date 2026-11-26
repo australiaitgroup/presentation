@@ -1,7 +1,7 @@
 import { Page, Head, Card, body, c, f, grid, type Tone } from '../kit';
 
 const stats: [Tone, string, string, string][] = [
-	['sunshine', '180', '家公司', '学员拿到过这些公司的 Offer'],
+	['sunshine', '500+', '家公司', '学员拿到过这些公司的 Offer'],
 	['sky', '100+', '家合作企业', '建立人才合作，定期举办招聘会和职业发展活动'],
 	['mint', '105', '家公司', '匠人的老师来自这些公司'],
 ];

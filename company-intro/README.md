@@ -12,8 +12,8 @@
 |---|---|---|
 | 2 | Offer 墙（`src/data/offers.ts`、`public/offers/`，2026-11-26 抓取 113 条） | 首页 |
 | 3、4 | 6028+、600+、6万+；覆盖国家 | 关于页；办公室地址取自页脚 |
-| 5 | 180 家学员雇主、105 家导师来源（首页）；100+ 合作企业（/business、关于页正文。关于页滚动数字另写 500，未采用） | 首页、/business |
-| 6 | 雇主 Logo 墙（`src/data/employers.ts`、`public/employers/`，179 个，官网另有 1 家名称未知） | 首页 |
+| 5 | 学员雇主 500+（owner 2026-11-26 定；首页可见 Logo 墙写 180 家）、105 家导师来源（首页）；100+ 合作企业（/business、关于页正文。关于页滚动数字另写 500，未采用） | 首页、/business |
+| 6 | 雇主 Logo 滚动墙，标题 500+（`src/data/employers.ts`、`public/employers/`，179 个，官网另有 1 家名称未知） | 首页 |
 | 7 | 合作伙伴五家。OpenAI、Claude、AWS 用官网徽章；Google、Microsoft 按 owner 2026-11-26 确认，暂用公司 Logo，拿到官方徽章后替换 | 首页、owner |
 | 10、14、17、18 | 学习方向、热门认证、导师、学员反馈 | 首页 |
 | 11 | 互动 Lab 名称 | 页脚 |

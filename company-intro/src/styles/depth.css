@@ -51,3 +51,10 @@
 .shine { background: linear-gradient(105deg, #fff 40%, #ffd43b 50%, #fff 60%) 0 0 / 260% 100%; -webkit-background-clip: text; background-clip: text; color: transparent; animation: shine 5s linear infinite; }
 @keyframes shine { from { background-position: 100% 0; } to { background-position: -60% 0; } }
 @media print { .cover-in, .aurora, .floor > div { animation: none !important; } .shine { background: none; color: #fff; } }
+
+/* 头像弹出、手机模型 */
+@keyframes pop3d { from { opacity: 0; transform: perspective(700px) translateZ(-260px) rotateY(70deg); } to { opacity: 1; transform: perspective(700px) translateZ(0) rotateY(0); } }
+.pop { animation: pop3d 0.7s var(--jc-ease) backwards; }
+.phone { width: 322px; padding: 10px; border-radius: 52px; background: #17142a; box-shadow: -22px 34px 60px -16px rgba(31, 27, 45, 0.5); }
+.phone img { width: 100%; display: block; border-radius: 42px; }
+@media print { .pop, .phone { animation: none !important; } }

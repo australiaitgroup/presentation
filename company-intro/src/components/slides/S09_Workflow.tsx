@@ -5,13 +5,13 @@ import { Page, asset, c, f } from '../kit';
 const steps = [
 	{ zh: '评估', en: 'Assess', ai: 'AI 读你的简历和想投的岗位，整理现状、目标和差距，每条都附原文', you: '你确认后才写进职业档案', out: '差距清单' },
 	{ zh: '规划', en: 'Plan', ai: '按差距先后和你每周能用的时间排计划，推荐课程、认证或项目', you: '看清每周要做什么', out: '每周计划' },
-	{ zh: '行动', en: 'Act', ai: '读这周的章节，AI 在旁边带着学', you: '做完一项勾一项，自动接下一周', out: '每周交付物' },
+	{ zh: '行动', en: 'Act', ai: '照本周计划动手做，读这周的章节，AI 在旁边带着学', you: '做完一项勾一项，自动接下一周', out: '每周交付物' },
 	{ zh: '证明', en: 'Prove', ai: '在真实项目里做任务，AI 导师在右侧提示下一步', you: '代码改动、测试结果和讲解固定成版本', out: '作品版本' },
 	{ zh: '连接', en: 'Connect', ai: '对照目标岗位准备投递材料', you: '拿作品让雇主核对', out: '投递材料' },
 	{ zh: '成长', en: 'Grow', ai: '记下面试结果和反馈，带着新信息回到评估或规划', you: '开始下一轮', out: '面试反馈' },
 ];
 // [名称, 起始列, 跨几列, 颜色]
-const zones: [string, number, number, string][] = [['网站上免费做', 1, 2, 'mint'], ['网站上做', 3, 1, 'sky'], ['CareerOS 桌面版', 4, 3, 'sunshine']];
+const zones: [string, number, number, string][] = [['网站上免费做', 1, 2, 'mint'], ['CareerOS Harness', 3, 4, 'sunshine']];
 
 export default function S09() {
 	const [active, setActive] = useState(0);

@@ -1,6 +1,6 @@
 import { Page, Card, Pill, asset, c, f } from '../kit';
 
-export default function S22() {
+export default function S23() {
 	return (
 		<Page dots>
 			<div style={{ display: 'grid', gridTemplateColumns: '1fr 440px', gap: 72, alignItems: 'center', height: '100%', padding: '0 96px' }}>

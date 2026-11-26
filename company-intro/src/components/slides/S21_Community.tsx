@@ -2,7 +2,7 @@ import { Page, Head, Pill, asset, body, c } from '../kit';
 
 const photos = ['images/event-slider-3.webp', 'images/partnership-2.jpg', 'images/event-slider-7.webp', 'images/event-slider-9.webp'];
 
-export default function S20() {
+export default function S21() {
 	return (
 		<Page bg={c('wash-sunshine')}>
 			<div style={body}>

@@ -16,11 +16,12 @@ import S14 from './components/slides/S14_P3';
 import S15 from './components/slides/S15_CertMaster';
 import S16 from './components/slides/S16_Connect';
 import S17 from './components/slides/S17_CareerOS';
-import S18 from './components/slides/S18_Mentors';
-import S19 from './components/slides/S19_Voices';
-import S20 from './components/slides/S20_Community';
-import S21 from './components/slides/S21_Business';
-import S22 from './components/slides/S22_Contact';
+import S18 from './components/slides/S18_Products';
+import S19 from './components/slides/S19_Mentors';
+import S20 from './components/slides/S20_Voices';
+import S21 from './components/slides/S21_Community';
+import S22 from './components/slides/S22_Business';
+import S23 from './components/slides/S23_Contact';
 
 export default function App() {
 	return (
@@ -47,6 +48,7 @@ export default function App() {
 			<S20 />
 			<S21 />
 			<S22 />
+			<S23 />
 		</SlideEngine>
 	);
 }
